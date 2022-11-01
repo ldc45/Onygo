@@ -1,0 +1,99 @@
+main {
+  background:rgba(0, 0, 0, 0.619) url("../assets/images/maldives.jpg");
+  background-repeat: no-repeat;
+  background-position:bottom;
+  background-blend-mode:darken;
+  background-size: cover;
+  height:100vh;
+}
+
+#titre {
+font-family:'Times New Roman', Times, serif;
+}
+
+#line2 {
+
+  margin-top:20px;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.2;
+
+}
+
+
+  #img1 {
+
+    height: 300px;
+    width: 300px;
+    margin-left: -45px;
+    margin-top: 10px;
+    
+  }
+  
+  .form-control {
+height: 25px;
+
+  }
+
+
+  label {
+
+    color: aliceblue;
+  }
+
+  .hr {
+    margin-top:50px;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: 0.2;
+  }
+  
+  #line2 {
+  
+    margin-top:20px;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: 0.2;
+  
+  }
+  
+
+/* Ecran < 599px */
+
+@media (max-width: 768px) {
+  .proj-grid {
+
+ height: 100vh;
+
+  
+  }
+  main {
+    background-size:contain;
+    background-position:center;
+   background: local;
+   
+    background:rgba(0, 0, 0, 0.372) url(../assets/images/maldives.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    
+  }
+  h1 {
+    font-size:large;
+   
+  }
+  #img1 {
+
+    height: 300px;
+    width: 300px;
+    margin-left: 5px;
+  }
+  #line1 {
+   margin: 20%;
+  }
+}
+
+
+
