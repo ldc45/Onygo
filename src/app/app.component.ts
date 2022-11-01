@@ -18,16 +18,22 @@ public monPaysArrivee : string;
 public montant : any;
 public codeDepart : any;
 public codeDestination : any;
+public codeImage : any;
+public temp : any;
+public description : any;
+public image : any;
+public rand = Math.floor(Math.random() * (10 - 1) + 1);
+
 private cleApi = "a92b35e3151ed3389e3aac02";
+private cleApi2 = "b9df352c5184221ff36bf83de98355c8";
+private cleApi3 = "goLxS35I_CQHM3MjK7FPnznmQrKYGksKqEjSsu5UfrE";
 
 //Retour sur les formcontrol de l'html
 inputDepart = new FormControl('');
 inputDestination = new FormControl('');
 budget= new FormControl('');
 
-constructor(private http: HttpClient){
-
-
+constructor(private http: HttpClient){ 
 this.monTitre = "Onygo";
 this.monIntroduction = "Avec Onygo voyage à travers le monde !";
 this.monPaysDepart= "Insérez le pays de départ";
@@ -35,22 +41,28 @@ this.monPaysArrivee= "Insérez le pays de d'arrivée";
  
 }
 
-
 ngOnInit():void{
 
 }
-public  afficherResultat(){
 
+public  afficherResultat(){
+console.log(this.rand)
  return this.http.get(`https://restcountries.com/v2/capital/${this.inputDepart.value}`)
-  .subscribe((data:any) => {alert(this.codeDepart= data[0]['currencies'][0]['code'])
+.subscribe((data:any) => {alert(this.codeDepart= data[0]['currencies'][0]['code'])
 
  return this.http.get(`https://restcountries.com/v2/capital/${this.inputDestination.value}`)
  .subscribe((data:any) => {alert(this.codeDestination=data[0]['currencies'][0]['code']),alert(data[0]['currencies'][0]['name'])
 
- return this.http.get(`https://v6.exchangerate-api.com/v6/${this.cleApi}/pair/${this.codeDepart}/JPY/${this.budget.value}`)
-  .subscribe((data:any) => {alert(this.montant = data.conversion_result.toFixed(0))
-   
+ return this.http.get(`https://v6.exchangerate-api.com/v6/${this.cleApi}/pair/${this.codeDepart}/${this.codeDestination}/${this.budget.value}`)
+ .subscribe((data:any) => {alert(this.montant = data.conversion_result.toFixed(2))
 
+return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.inputDestination.value}&appid=${this.cleApi2}`)
+.subscribe((data:any) => {alert(this.temp = (data['main']['temp']-273.15).toFixed(0)), alert(this.codeImage = data['weather'][0]['icon']), alert(this.description = data['weather'][0]['description'])
+
+return this.http.get(`https://api.unsplash.com/search/photos?client_id=${this.cleApi3}&query=${this.inputDestination.value}-monument`)
+.subscribe((data:any) => {this.image=data['results'][this.rand]['urls']['regular']
+});
+});
 });
 });
 });
