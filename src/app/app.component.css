@@ -1,3 +1,7 @@
+
+
+/* CSS à re-factoriser car certains sélecteurs sont inutilisés */
+
 main {
   background:rgba(0, 0, 0, 0.619) url("../assets/images/maldives.jpg");
   background-repeat: no-repeat;
@@ -60,7 +64,19 @@ height: 25px;
   
   }
 
+.gallery{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
 
+.gallery-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
   
 
 /* Ecran < 599px */
