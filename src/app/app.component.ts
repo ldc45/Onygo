@@ -59,8 +59,9 @@ console.log(this.rand)
 return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.inputDestination.value}&appid=${this.cleApi2}`)
 .subscribe((data:any) => {alert(this.temp = (data['main']['temp']-273.15).toFixed(0)), alert(this.codeImage = data['weather'][0]['icon']), alert(this.description = data['weather'][0]['description'])
 
-return this.http.get(`https://api.unsplash.com/search/photos?client_id=${this.cleApi3}&query=${this.inputDestination.value}-monument`)
+return this.http.get(`https://api.unsplash.com/search/photos?client_id=${this.cleApi3}&query=${this.inputDestination.value}-background`)
 .subscribe((data:any) => {this.image=data['results'][this.rand]['urls']['regular']
+
 });
 });
 });
