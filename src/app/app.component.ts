@@ -42,7 +42,7 @@ ngOnInit():void{
 
 }
 //${this.inputDepart.value}
-public  afficherResultat(){
+public afficherResultat(){
 
   return this.http.get(`https://restcountries.com/v2/capital/paris`)
  .subscribe((data:any) => {console.log(this.codeDepart= data[0]['currencies'][0]['code'])

@@ -546,7 +546,8 @@
           
           <!-- Budget -->
           <div class="col d-flex justify-content-center">
-            <input class="mx-2" type="number" id="tentacles" name="tentacles" min="0" max="5000" [formControl]="budget">
+           
+            <input class="mx-2 " type="number" id="inputBudget" name="inputBudget" min="0" max="5000" [formControl]="budget">
           </div>
 
         </div>
@@ -557,16 +558,13 @@
       <div class="container d-flex justify-content-center my-5">
         <div class="row">
           <div class="col my-5">
-            <a (click)="afficherResultat()" class="btn btn-primary" href="#" role="button">Rechercher</a>
+            <a (click)="afficherResultat()" class="btn btn-primary">Rechercher</a>
           </div>
         </div>
       </div>
 <!-- <img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" [alt]=""> -->
 
-<img src="{{image}}" [alt]="">
-
-
-<p>{{description}}</p>
+<img [src]="image" alt="imageDestination">
 
     </section>
   </main>
