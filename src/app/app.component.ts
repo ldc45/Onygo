@@ -11,10 +11,9 @@ export class AppComponent implements OnInit  {
   title = 'Onygo';
 
 //Déclaration des variables
+public logo ="assets/images/Pink_Minimalist_Planet_Travel_Logo_Design_1.png"
 public monTitre : string;
 public monIntroduction : string;
-public monPaysDepart : string;
-public monPaysArrivee : string;
 public montant : any;
 public codeDepart : any;
 public codeDestination : any;
@@ -36,9 +35,7 @@ budget= new FormControl('');
 constructor(private http: HttpClient){ 
 this.monTitre = "Onygo";
 this.monIntroduction = "Avec Onygo voyage à travers le monde !";
-this.monPaysDepart= "Insérez le pays de départ";
-this.monPaysArrivee= "Insérez le pays de d'arrivée";
- 
+
 }
 
 ngOnInit():void{
