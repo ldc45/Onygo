@@ -59,19 +59,23 @@ public afficherResultat(){
 
  return this.http.get(`https://api.unsplash.com/search/photos?client_id=${this.cleApi3}&query=${this.inputDestination.value}`)
  .subscribe((data:any) => {
-  for (let i = 0; i<9; i++){
-  //console.log(data['results'][i]['urls']['regular'])
-  let img = document.createElement('img')
-  //Nous venons de créer un nouvel élément de type  img , mais qui n'est pas encore rattaché au DOM.
-  img.src = data['results'][i]['urls']['regular']
-  //La propriété className de l'interface Element récupère et définit la valeur de l'attribut class de l'élément spécifié.
-  img.className = 'gallery-img'
-  // Nous avons ensuite récupéré l'élément ayant pour class "gallery"
-  const gallery = document.querySelector('.gallery');
- //Nous avons ajouté notre nouvel élément dans les enfants de l'élément 
-  gallery?.appendChild(img) 
-  //La propriété appendChild sur gallery peut être null, ce qui provoque une erreur.Nous pouvons utiliser l'opérateur de chaînage optionnel (?.) pour contourner ce problème.
- }
+  let section = document.createElement('section')
+  section.className = 'gallery'
+  for (let i = 0; i<3; i++){
+    //console.log(data['results'][i]['urls']['regular'])
+    let img = document.createElement('img')
+    //Nous venons de créer un nouvel élément de type  img , mais qui n'est pas encore rattaché au DOM.
+    img.src = data['results'][i]['urls']['regular']
+    //La propriété className de l'interface Element récupère et définit la valeur de l'attribut class de l'élément spécifié.
+    img.className = 'gallery--img'
+    // Nous avons ensuite récupéré l'élément ayant pour class "gallery"
+  
+    const galleryContainers = document.querySelectorAll('.gallery__container');
+   //Nous avons ajouté notre nouvel élément dans les enfants de l'élément 
+    galleryContainers[i]?.appendChild(img) 
+    //La propriété appendChild sur gallery peut être null, ce qui provoque une erreur.Nous pouvons utiliser l'opérateur de chaînage optionnel (?.) pour contourner ce problème.
+   } 
+  
   //this.image=data['results'][this.rand]['urls']['regular']
 
  });

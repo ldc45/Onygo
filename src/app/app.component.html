@@ -1,587 +1,584 @@
+
 <!doctype html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-  <title>{{monTitre}}</title>
-</head>
-
-<body>
-  <main>
-    <img id="img1" [src]="logo">
-    <!-- Section 1 -->
-    <section class="proj-grid">
-      <div class="container d-flex justify-content-center align-items-center">
-        <div class="row gy-4 gy-md-0 text-center">
-          <div class="col-12 ">
-            <hr id="line1" class="bg-danger border-1.1 border-top border-white">
-            <h1 id="titre" class=" py-5 text-white my-5"> Avec Onygo voyage à travers le monde !</h1>
-            <h3 class="fw-light py-5 my-5 text-white ">Indique ta destination et ton budget </h3>
-          </div>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+<main>
+  <img id="img1" [src]="logo">
+  <!-- Section 1 -->
+  <section class="proj-grid">
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="row gy-4 gy-md-0 text-center">
+        <div class="col-12 ">
+          <hr id="line1" class="bg-danger border-1.1 border-top border-white">
+          <h1 id="titre" class=" py-5 text-white my-5"> Avec Onygo voyage à travers le monde !</h1>
+          <h3 class="fw-light py-5 my-5 text-white ">Indique ta destination et ton budget </h3>
         </div>
       </div>
+    </div>
 
 
-    <!-- Inputs de l'utilisateur -->
-      <div class="container d-flex justify-content-center">
+  <!-- Inputs de l'utilisateur -->
+    <div class="container d-flex justify-content-center">
 
-        <div class="row">
+      <div class="row">
 
-          <!-- Départ -->
-          <div class="col mx-5">
-            <select class="form-select" aria-label="Default select example" [formControl]="inputDepart">
+        <!-- Départ -->
+        <div class="col mx-5">
+          <select class="form-select" aria-label="Default select example" [formControl]="inputDepart">
 
-              <option selected>Départ</option>
-              
-              <option value="Abu Dhabi">Abu Dhabi</option>
-              <option value="Abuja">Abuja</option>
-              <option value="Accra">Accra</option>
-              <option value="Adamstown">Adamstown</option>
-              <option value="Addis Ababa">Addis Ababa</option>
-              <option value="Algiers">Algiers</option>
-              <option value="Alofi">Alofi</option>
-              <option value="Amman">Amman</option>
-              <option value="Amsterdam">Amsterdam</option>
-              <option value="Andorra la Vella">Andorra la Vella</option>
-              <option value="Ankara">Ankara</option>
-              <option value="Antananarivo">Antananarivo</option>
-              <option value="Apia">Apia</option>
-              <option value="Ashgabat">Ashgabat</option>
-              <option value="Asmara">Asmara</option>
-              <option value="Asunción">Asunción</option>
-              <option value="Athens">Athens</option>
-              <option value="Avarua">Avarua</option>
-              <option value="Baghdad">Baghdad</option>
-              <option value="Baku">Baku</option>
-              <option value="Bamako">Bamako</option>
-              <option value="Bandar Seri Begawan">Bandar Seri Begawan</option>
-              <option value="Bangkok">Bangkok</option>
-              <option value="Bangui">Bangui</option>
-              <option value="Banjul">Banjul</option>
-              <option value="Basse-Terre">Basse-Terre</option>
-              <option value="Basseterre">Basseterre</option>
-              <option value="Beijing">Beijing</option>
-              <option value="Beirut">Beirut</option>
-              <option value="Belgrade">Belgrade</option>
-              <option value="Belmopan">Belmopan</option>
-              <option value="Berlin">Berlin</option>
-              <option value="Bern">Bern</option>
-              <option value="Bishkek">Bishkek</option>
-              <option value="Bissau">Bissau</option>
-              <option value="Bogotá">Bogotá</option>
-              <option value="Brasília">Brasília</option>
-              <option value="Bratislava">Bratislava</option>
-              <option value="Brazzaville">Brazzaville</option>
-              <option value="Bridgetown">Bridgetown</option>
-              <option value="Brussels">Brussels</option>
-              <option value="Bucharest">Bucharest</option>
-              <option value="Budapest">Budapest</option>
-              <option value="Buenos Aires">Buenos Aires</option>
-              <option value="Cairo">Cairo</option>
-              <option value="Canberra">Canberra</option>
-              <option value="Caracas">Caracas</option>
-              <option value="Castries">Castries</option>
-              <option value="Cayenne">Cayenne</option>
-              <option value="Charlotte Amalie">Charlotte Amalie</option>
-              <option value="City of San Marino">City of San Marino</option>
-              <option value="City of Victoria">City of Victoria</option>
-              <option value="Cockburn Town">Cockburn Town</option>
-              <option value="Conakry">Conakry</option>
-              <option value="Copenhagen">Copenhagen</option>
-              <option value="Dakar">Dakar</option>
-              <option value="Damascus">Damascus</option>
-              <option value="Dhaka">Dhaka</option>
-              <option value="Diego Garcia">Diego Garcia</option>
-              <option value="Dili">Dili</option>
-              <option value="Djibouti">Djibouti</option>
-              <option value="Dodoma">Dodoma</option>
-              <option value="Doha">Doha</option>
-              <option value="Douglas">Douglas</option>
-              <option value="Dublin">Dublin</option>
-              <option value="Dushanbe">Dushanbe</option>
-              <option value="El Aaiún">El Aaiún</option>
-              <option value="Fakaofo">Fakaofo</option>
-              <option value="Flying Fish Cove">Flying Fish Cove</option>
-              <option value="Fort-de-France">Fort-de-France</option>
-              <option value="Freetown">Freetown</option>
-              <option value="Funafuti">Funafuti</option>
-              <option value="Gaborone">Gaborone</option>
-              <option value="George Town">George Town</option>
-              <option value="Georgetown">Georgetown</option>
-              <option value="Gibraltar">Gibraltar</option>
-              <option value="Gitega">Gitega</option>
-              <option value="Guatemala City">Guatemala City</option>
-              <option value="Gustavia">Gustavia</option>
-              <option value="Hagåtña">Hagåtña</option>
-              <option value="Hamilton">Hamilton</option>
-              <option value="Hanoi">Hanoi</option>
-              <option value="Harare">Harare</option>
-              <option value="Havana">Havana</option>
-              <option value="Helsinki">Helsinki</option>
-              <option value="Honiara">Honiara</option>
-              <option value="Islamabad">Islamabad</option>
-              <option value="Jakarta">Jakarta</option>
-              <option value="Jamestown">Jamestown</option>
-              <option value="Jerusalem">Jerusalem</option>
-              <option value="Juba">Juba</option>
-              <option value="Kabul">Kabul</option>
-              <option value="Kampala">Kampala</option>
-              <option value="Kathmandu">Kathmandu</option>
-              <option value="Khartoum">Khartoum</option>
-              <option value="Kigali">Kigali</option>
-              <option value="King Edward Point">King Edward Point</option>
-              <option value="Kingston">Kingston</option>
-              <option value="Kingston">Kingston</option>
-              <option value="Kingstown">Kingstown</option>
-              <option value="Kinshasa">Kinshasa</option>
-              <option value="Kralendijk">Kralendijk</option>
-              <option value="Kuala Lumpur">Kuala Lumpur</option>
-              <option value="Kuwait City">Kuwait City</option>
-              <option value="Kyiv">Kyiv</option>
-              <option value="Libreville">Libreville</option>
-              <option value="Lilongwe">Lilongwe</option>
-              <option value="Lima">Lima</option>
-              <option value="Lisbon">Lisbon</option>
-              <option value="Ljubljana">Ljubljana</option>
-              <option value="Lomé">Lomé</option>
-              <option value="London">London</option>
-              <option value="Longyearbyen">Longyearbyen</option>
-              <option value="Luanda">Luanda</option>
-              <option value="Lusaka">Lusaka</option>
-              <option value="Luxembourg">Luxembourg</option>
-              <option value="Madrid">Madrid</option>
-              <option value="Majuro">Majuro</option>
-              <option value="Malabo">Malabo</option>
-              <option value="Malé">Malé</option>
-              <option value="Mamoudzou">Mamoudzou</option>
-              <option value="Managua">Managua</option>
-              <option value="Manama">Manama</option>
-              <option value="Manila">Manila</option>
-              <option value="Maputo">Maputo</option>
-              <option value="Mariehamn">Mariehamn</option>
-              <option value="Marigot">Marigot</option>
-              <option value="Maseru">Maseru</option>
-              <option value="Mata-Utu">Mata-Utu</option>
-              <option value="Mbabane">Mbabane</option>
-              <option value="Mexico City">Mexico City</option>
-              <option value="Minsk">Minsk</option>
-              <option value="Mogadishu">Mogadishu</option>
-              <option value="Monaco">Monaco</option>
-              <option value="Monrovia">Monrovia</option>
-              <option value="Montevideo">Montevideo</option>
-              <option value="Moroni">Moroni</option>
-              <option value="Moscow">Moscow</option>
-              <option value="Muscat">Muscat</option>
-              <option value="N'Djamena">N'Djamena</option>
-              <option value="Nairobi">Nairobi</option>
-              <option value="Nassau">Nassau</option>
-              <option value="Naypyidaw">Naypyidaw</option>
-              <option value="New Delhi">New Delhi</option>
-              <option value="Ngerulmud">Ngerulmud</option>
-              <option value="Niamey">Niamey</option>
-              <option value="Nicosia">Nicosia</option>
-              <option value="Nouakchott">Nouakchott</option>
-              <option value="Nouméa">Nouméa</option>
-              <option value="Nuku'alofa">Nuku'alofa</option>
-              <option value="Nur-Sultan">Nur-Sultan</option>
-              <option value="Nuuk">Nuuk</option>
-              <option value="Oranjestad">Oranjestad</option>
-              <option value="Oslo">Oslo</option>
-              <option value="Ottawa">Ottawa</option>
-              <option value="Ouagadougou">Ouagadougou</option>
-              <option value="Pago Pago">Pago Pago</option>
-              <option value="Palikir">Palikir</option>
-              <option value="Panama City">Panama City</option>
-              <option value="Papeeté">Papeeté</option>
-              <option value="Paramaribo">Paramaribo</option>
-              <option value="Paris">Paris</option>
-              <option value="Philipsburg">Philipsburg</option>
-              <option value="Phnom Penh">Phnom Penh</option>
-              <option value="Plymouth">Plymouth</option>
-              <option value="Podgorica">Podgorica</option>
-              <option value="Port Louis">Port Louis</option>
-              <option value="Port Moresby">Port Moresby</option>
-              <option value="Port of Spain">Port of Spain</option>
-              <option value="Port Vila">Port Vila</option>
-              <option value="Port-au-Prince">Port-au-Prince</option>
-              <option value="Port-aux-Français">Port-aux-Français</option>
-              <option value="Porto-Novo">Porto-Novo</option>
-              <option value="Prague">Prague</option>
-              <option value="Praia">Praia</option>
-              <option value="Pretoria">Pretoria</option>
-              <option value="Pristina">Pristina</option>
-              <option value="Pyongyang">Pyongyang</option>
-              <option value="Quito">Quito</option>
-              <option value="Rabat">Rabat</option>
-              <option value="Ramallah">Ramallah</option>
-              <option value="Reykjavik">Reykjavik</option>
-              <option value="Riga">Riga</option>
-              <option value="Riyadh">Riyadh</option>
-              <option value="Road Town">Road Town</option>
-              <option value="Rome">Rome</option>
-              <option value="Roseau">Roseau</option>
-              <option value="Saint Helier">Saint Helier</option>
-              <option value="Saint John's">Saint John's</option>
-              <option value="Saint-Denis">Saint-Denis</option>
-              <option value="Saint-Pierre">Saint-Pierre</option>
-              <option value="Saipan">Saipan</option>
-              <option value="San José">San José</option>
-              <option value="San Juan">San Juan</option>
-              <option value="San Salvador">San Salvador</option>
-              <option value="Sana'a">Sana'a</option>
-              <option value="Santiago">Santiago</option>
-              <option value="Santo Domingo">Santo Domingo</option>
-              <option value="São Tomé">São Tomé</option>
-              <option value="Sarajevo">Sarajevo</option>
-              <option value="Seoul">Seoul</option>
-              <option value="Singapore">Singapore</option>
-              <option value="Skopje">Skopje</option>
-              <option value="Sofia">Sofia</option>
-              <option value="South Tarawa">South Tarawa</option>
-              <option value="Sri Jayawardenepura Kotte">Sri Jayawardenepura Kotte</option>
-              <option value="St. George's">St. George's</option>
-              <option value="St. Peter Port">St. Peter Port</option>
-              <option value="Stanley">Stanley</option>
-              <option value="Stockholm">Stockholm</option>
-              <option value="Sucre">Sucre</option>
-              <option value="Suva">Suva</option>
-              <option value="Taipei">Taipei</option>
-              <option value="Tallinn">Tallinn</option>
-              <option value="Tashkent">Tashkent</option>
-              <option value="Tbilisi">Tbilisi</option>
-              <option value="Tegucigalpa">Tegucigalpa</option>
-              <option value="Tehran">Tehran</option>
-              <option value="The Valley">The Valley</option>
-              <option value="Thimphu">Thimphu</option>
-              <option value="Tirana">Tirana</option>
-              <option value="Tokyo">Tokyo"</option>
-              <option value="Tórshavn">Tórshavn</option>
-              <option value="Tripoli">Tripoli</option>
-              <option value="Tunis">Tunis</option>
-              <option value="Ulan Bator">Ulan Bator</option>
-              <option value="undefined">undefined</option>
-              <option value="Vaduz">Vaduz</option>
-              <option value="Valletta">Valletta</option>
-              <option value="Vatican City">Vatican City</option>
-              <option value="Victoria">Victoria</option>
-              <option value="Vienna">Vienna</option>
-              <option value="Vientiane">Vientiane</option>
-              <option value="Vilnius">Vilnius</option>
-              <option value="Warsaw">Warsaw</option>
-              <option value="Washington DC">Washington DC</option>
-              <option value="Washington, D.C.">Washington, D.C.</option>
-              <option value="Wellington">Wellington</option>
-              <option value="West Island">West Island</option>
-              <option value="Willemstad">Willemstad</option>
-              <option value="Windhoek">Windhoek</option>
-              <option value="Yamoussoukro">Yamoussoukro</option>
-              <option value="Yaoundé">Yaoundé</option>
-              <option value="Yaren">Yaren</option>
-              <option value="Yerevan">Yerevan</option>
-              <option value="Zagreb">Zagreb</option>
-            </select>
-          </div>
+            <option selected>Départ</option>
+            
+            <option value="Abu Dhabi">Abu Dhabi</option>
+            <option value="Abuja">Abuja</option>
+            <option value="Accra">Accra</option>
+            <option value="Adamstown">Adamstown</option>
+            <option value="Addis Ababa">Addis Ababa</option>
+            <option value="Algiers">Algiers</option>
+            <option value="Alofi">Alofi</option>
+            <option value="Amman">Amman</option>
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Andorra la Vella">Andorra la Vella</option>
+            <option value="Ankara">Ankara</option>
+            <option value="Antananarivo">Antananarivo</option>
+            <option value="Apia">Apia</option>
+            <option value="Ashgabat">Ashgabat</option>
+            <option value="Asmara">Asmara</option>
+            <option value="Asunción">Asunción</option>
+            <option value="Athens">Athens</option>
+            <option value="Avarua">Avarua</option>
+            <option value="Baghdad">Baghdad</option>
+            <option value="Baku">Baku</option>
+            <option value="Bamako">Bamako</option>
+            <option value="Bandar Seri Begawan">Bandar Seri Begawan</option>
+            <option value="Bangkok">Bangkok</option>
+            <option value="Bangui">Bangui</option>
+            <option value="Banjul">Banjul</option>
+            <option value="Basse-Terre">Basse-Terre</option>
+            <option value="Basseterre">Basseterre</option>
+            <option value="Beijing">Beijing</option>
+            <option value="Beirut">Beirut</option>
+            <option value="Belgrade">Belgrade</option>
+            <option value="Belmopan">Belmopan</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Bern">Bern</option>
+            <option value="Bishkek">Bishkek</option>
+            <option value="Bissau">Bissau</option>
+            <option value="Bogotá">Bogotá</option>
+            <option value="Brasília">Brasília</option>
+            <option value="Bratislava">Bratislava</option>
+            <option value="Brazzaville">Brazzaville</option>
+            <option value="Bridgetown">Bridgetown</option>
+            <option value="Brussels">Brussels</option>
+            <option value="Bucharest">Bucharest</option>
+            <option value="Budapest">Budapest</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Cairo">Cairo</option>
+            <option value="Canberra">Canberra</option>
+            <option value="Caracas">Caracas</option>
+            <option value="Castries">Castries</option>
+            <option value="Cayenne">Cayenne</option>
+            <option value="Charlotte Amalie">Charlotte Amalie</option>
+            <option value="City of San Marino">City of San Marino</option>
+            <option value="City of Victoria">City of Victoria</option>
+            <option value="Cockburn Town">Cockburn Town</option>
+            <option value="Conakry">Conakry</option>
+            <option value="Copenhagen">Copenhagen</option>
+            <option value="Dakar">Dakar</option>
+            <option value="Damascus">Damascus</option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Diego Garcia">Diego Garcia</option>
+            <option value="Dili">Dili</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Dodoma">Dodoma</option>
+            <option value="Doha">Doha</option>
+            <option value="Douglas">Douglas</option>
+            <option value="Dublin">Dublin</option>
+            <option value="Dushanbe">Dushanbe</option>
+            <option value="El Aaiún">El Aaiún</option>
+            <option value="Fakaofo">Fakaofo</option>
+            <option value="Flying Fish Cove">Flying Fish Cove</option>
+            <option value="Fort-de-France">Fort-de-France</option>
+            <option value="Freetown">Freetown</option>
+            <option value="Funafuti">Funafuti</option>
+            <option value="Gaborone">Gaborone</option>
+            <option value="George Town">George Town</option>
+            <option value="Georgetown">Georgetown</option>
+            <option value="Gibraltar">Gibraltar</option>
+            <option value="Gitega">Gitega</option>
+            <option value="Guatemala City">Guatemala City</option>
+            <option value="Gustavia">Gustavia</option>
+            <option value="Hagåtña">Hagåtña</option>
+            <option value="Hamilton">Hamilton</option>
+            <option value="Hanoi">Hanoi</option>
+            <option value="Harare">Harare</option>
+            <option value="Havana">Havana</option>
+            <option value="Helsinki">Helsinki</option>
+            <option value="Honiara">Honiara</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Jakarta">Jakarta</option>
+            <option value="Jamestown">Jamestown</option>
+            <option value="Jerusalem">Jerusalem</option>
+            <option value="Juba">Juba</option>
+            <option value="Kabul">Kabul</option>
+            <option value="Kampala">Kampala</option>
+            <option value="Kathmandu">Kathmandu</option>
+            <option value="Khartoum">Khartoum</option>
+            <option value="Kigali">Kigali</option>
+            <option value="King Edward Point">King Edward Point</option>
+            <option value="Kingston">Kingston</option>
+            <option value="Kingston">Kingston</option>
+            <option value="Kingstown">Kingstown</option>
+            <option value="Kinshasa">Kinshasa</option>
+            <option value="Kralendijk">Kralendijk</option>
+            <option value="Kuala Lumpur">Kuala Lumpur</option>
+            <option value="Kuwait City">Kuwait City</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Libreville">Libreville</option>
+            <option value="Lilongwe">Lilongwe</option>
+            <option value="Lima">Lima</option>
+            <option value="Lisbon">Lisbon</option>
+            <option value="Ljubljana">Ljubljana</option>
+            <option value="Lomé">Lomé</option>
+            <option value="London">London</option>
+            <option value="Longyearbyen">Longyearbyen</option>
+            <option value="Luanda">Luanda</option>
+            <option value="Lusaka">Lusaka</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Majuro">Majuro</option>
+            <option value="Malabo">Malabo</option>
+            <option value="Malé">Malé</option>
+            <option value="Mamoudzou">Mamoudzou</option>
+            <option value="Managua">Managua</option>
+            <option value="Manama">Manama</option>
+            <option value="Manila">Manila</option>
+            <option value="Maputo">Maputo</option>
+            <option value="Mariehamn">Mariehamn</option>
+            <option value="Marigot">Marigot</option>
+            <option value="Maseru">Maseru</option>
+            <option value="Mata-Utu">Mata-Utu</option>
+            <option value="Mbabane">Mbabane</option>
+            <option value="Mexico City">Mexico City</option>
+            <option value="Minsk">Minsk</option>
+            <option value="Mogadishu">Mogadishu</option>
+            <option value="Monaco">Monaco</option>
+            <option value="Monrovia">Monrovia</option>
+            <option value="Montevideo">Montevideo</option>
+            <option value="Moroni">Moroni</option>
+            <option value="Moscow">Moscow</option>
+            <option value="Muscat">Muscat</option>
+            <option value="N'Djamena">N'Djamena</option>
+            <option value="Nairobi">Nairobi</option>
+            <option value="Nassau">Nassau</option>
+            <option value="Naypyidaw">Naypyidaw</option>
+            <option value="New Delhi">New Delhi</option>
+            <option value="Ngerulmud">Ngerulmud</option>
+            <option value="Niamey">Niamey</option>
+            <option value="Nicosia">Nicosia</option>
+            <option value="Nouakchott">Nouakchott</option>
+            <option value="Nouméa">Nouméa</option>
+            <option value="Nuku'alofa">Nuku'alofa</option>
+            <option value="Nur-Sultan">Nur-Sultan</option>
+            <option value="Nuuk">Nuuk</option>
+            <option value="Oranjestad">Oranjestad</option>
+            <option value="Oslo">Oslo</option>
+            <option value="Ottawa">Ottawa</option>
+            <option value="Ouagadougou">Ouagadougou</option>
+            <option value="Pago Pago">Pago Pago</option>
+            <option value="Palikir">Palikir</option>
+            <option value="Panama City">Panama City</option>
+            <option value="Papeeté">Papeeté</option>
+            <option value="Paramaribo">Paramaribo</option>
+            <option value="Paris">Paris</option>
+            <option value="Philipsburg">Philipsburg</option>
+            <option value="Phnom Penh">Phnom Penh</option>
+            <option value="Plymouth">Plymouth</option>
+            <option value="Podgorica">Podgorica</option>
+            <option value="Port Louis">Port Louis</option>
+            <option value="Port Moresby">Port Moresby</option>
+            <option value="Port of Spain">Port of Spain</option>
+            <option value="Port Vila">Port Vila</option>
+            <option value="Port-au-Prince">Port-au-Prince</option>
+            <option value="Port-aux-Français">Port-aux-Français</option>
+            <option value="Porto-Novo">Porto-Novo</option>
+            <option value="Prague">Prague</option>
+            <option value="Praia">Praia</option>
+            <option value="Pretoria">Pretoria</option>
+            <option value="Pristina">Pristina</option>
+            <option value="Pyongyang">Pyongyang</option>
+            <option value="Quito">Quito</option>
+            <option value="Rabat">Rabat</option>
+            <option value="Ramallah">Ramallah</option>
+            <option value="Reykjavik">Reykjavik</option>
+            <option value="Riga">Riga</option>
+            <option value="Riyadh">Riyadh</option>
+            <option value="Road Town">Road Town</option>
+            <option value="Rome">Rome</option>
+            <option value="Roseau">Roseau</option>
+            <option value="Saint Helier">Saint Helier</option>
+            <option value="Saint John's">Saint John's</option>
+            <option value="Saint-Denis">Saint-Denis</option>
+            <option value="Saint-Pierre">Saint-Pierre</option>
+            <option value="Saipan">Saipan</option>
+            <option value="San José">San José</option>
+            <option value="San Juan">San Juan</option>
+            <option value="San Salvador">San Salvador</option>
+            <option value="Sana'a">Sana'a</option>
+            <option value="Santiago">Santiago</option>
+            <option value="Santo Domingo">Santo Domingo</option>
+            <option value="São Tomé">São Tomé</option>
+            <option value="Sarajevo">Sarajevo</option>
+            <option value="Seoul">Seoul</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Skopje">Skopje</option>
+            <option value="Sofia">Sofia</option>
+            <option value="South Tarawa">South Tarawa</option>
+            <option value="Sri Jayawardenepura Kotte">Sri Jayawardenepura Kotte</option>
+            <option value="St. George's">St. George's</option>
+            <option value="St. Peter Port">St. Peter Port</option>
+            <option value="Stanley">Stanley</option>
+            <option value="Stockholm">Stockholm</option>
+            <option value="Sucre">Sucre</option>
+            <option value="Suva">Suva</option>
+            <option value="Taipei">Taipei</option>
+            <option value="Tallinn">Tallinn</option>
+            <option value="Tashkent">Tashkent</option>
+            <option value="Tbilisi">Tbilisi</option>
+            <option value="Tegucigalpa">Tegucigalpa</option>
+            <option value="Tehran">Tehran</option>
+            <option value="The Valley">The Valley</option>
+            <option value="Thimphu">Thimphu</option>
+            <option value="Tirana">Tirana</option>
+            <option value="Tokyo">Tokyo"</option>
+            <option value="Tórshavn">Tórshavn</option>
+            <option value="Tripoli">Tripoli</option>
+            <option value="Tunis">Tunis</option>
+            <option value="Ulan Bator">Ulan Bator</option>
+            <option value="undefined">undefined</option>
+            <option value="Vaduz">Vaduz</option>
+            <option value="Valletta">Valletta</option>
+            <option value="Vatican City">Vatican City</option>
+            <option value="Victoria">Victoria</option>
+            <option value="Vienna">Vienna</option>
+            <option value="Vientiane">Vientiane</option>
+            <option value="Vilnius">Vilnius</option>
+            <option value="Warsaw">Warsaw</option>
+            <option value="Washington DC">Washington DC</option>
+            <option value="Washington, D.C.">Washington, D.C.</option>
+            <option value="Wellington">Wellington</option>
+            <option value="West Island">West Island</option>
+            <option value="Willemstad">Willemstad</option>
+            <option value="Windhoek">Windhoek</option>
+            <option value="Yamoussoukro">Yamoussoukro</option>
+            <option value="Yaoundé">Yaoundé</option>
+            <option value="Yaren">Yaren</option>
+            <option value="Yerevan">Yerevan</option>
+            <option value="Zagreb">Zagreb</option>
+          </select>
+        </div>
 
-          <!-- Destination -->
-          <div class="col mx-2 ">
-            <select class="form-select" aria-label="Default select example" [formControl]="inputDestination">
-          
-              <option selected>Destination</option>
-          
-              <option value="Abu Dhabi">Abu Dhabi</option>
-              <option value="Abuja">Abuja</option>
-              <option value="Accra">Accra</option>
-              <option value="Adamstown">Adamstown</option>
-              <option value="Addis Ababa">Addis Ababa</option>
-              <option value="Algiers">Algiers</option>
-              <option value="Alofi">Alofi</option>
-              <option value="Amman">Amman</option>
-              <option value="Amsterdam">Amsterdam</option>
-              <option value="Andorra la Vella">Andorra la Vella</option>
-              <option value="Ankara">Ankara</option>
-              <option value="Antananarivo">Antananarivo</option>
-              <option value="Apia">Apia</option>
-              <option value="Ashgabat">Ashgabat</option>
-              <option value="Asmara">Asmara</option>
-              <option value="Asunción">Asunción</option>
-              <option value="Athens">Athens</option>
-              <option value="Avarua">Avarua</option>
-              <option value="Baghdad">Baghdad</option>
-              <option value="Baku">Baku</option>
-              <option value="Bamako">Bamako</option>
-              <option value="Bandar Seri Begawan">Bandar Seri Begawan</option>
-              <option value="Bangkok">Bangkok</option>
-              <option value="Bangui">Bangui</option>
-              <option value="Banjul">Banjul</option>
-              <option value="Basse-Terre">Basse-Terre</option>
-              <option value="Basseterre">Basseterre</option>
-              <option value="Beijing">Beijing</option>
-              <option value="Beirut">Beirut</option>
-              <option value="Belgrade">Belgrade</option>
-              <option value="Belmopan">Belmopan</option>
-              <option value="Berlin">Berlin</option>
-              <option value="Bern">Bern</option>
-              <option value="Bishkek">Bishkek</option>
-              <option value="Bissau">Bissau</option>
-              <option value="Bogotá">Bogotá</option>
-              <option value="Brasília">Brasília</option>
-              <option value="Bratislava">Bratislava</option>
-              <option value="Brazzaville">Brazzaville</option>
-              <option value="Bridgetown">Bridgetown</option>
-              <option value="Brussels">Brussels</option>
-              <option value="Bucharest">Bucharest</option>
-              <option value="Budapest">Budapest</option>
-              <option value="Buenos Aires">Buenos Aires</option>
-              <option value="Cairo">Cairo</option>
-              <option value="Canberra">Canberra</option>
-              <option value="Caracas">Caracas</option>
-              <option value="Castries">Castries</option>
-              <option value="Cayenne">Cayenne</option>
-              <option value="Charlotte Amalie">Charlotte Amalie</option>
-              <option value="City of San Marino">City of San Marino</option>
-              <option value="City of Victoria">City of Victoria</option>
-              <option value="Cockburn Town">Cockburn Town</option>
-              <option value="Conakry">Conakry</option>
-              <option value="Copenhagen">Copenhagen</option>
-              <option value="Dakar">Dakar</option>
-              <option value="Damascus">Damascus</option>
-              <option value="Dhaka">Dhaka</option>
-              <option value="Diego Garcia">Diego Garcia</option>
-              <option value="Dili">Dili</option>
-              <option value="Djibouti">Djibouti</option>
-              <option value="Dodoma">Dodoma</option>
-              <option value="Doha">Doha</option>
-              <option value="Douglas">Douglas</option>
-              <option value="Dublin">Dublin</option>
-              <option value="Dushanbe">Dushanbe</option>
-              <option value="El Aaiún">El Aaiún</option>
-              <option value="Fakaofo">Fakaofo</option>
-              <option value="Flying Fish Cove">Flying Fish Cove</option>
-              <option value="Fort-de-France">Fort-de-France</option>
-              <option value="Freetown">Freetown</option>
-              <option value="Funafuti">Funafuti</option>
-              <option value="Gaborone">Gaborone</option>
-              <option value="George Town">George Town</option>
-              <option value="Georgetown">Georgetown</option>
-              <option value="Gibraltar">Gibraltar</option>
-              <option value="Gitega">Gitega</option>
-              <option value="Guatemala City">Guatemala City</option>
-              <option value="Gustavia">Gustavia</option>
-              <option value="Hagåtña">Hagåtña</option>
-              <option value="Hamilton">Hamilton</option>
-              <option value="Hanoi">Hanoi</option>
-              <option value="Harare">Harare</option>
-              <option value="Havana">Havana</option>
-              <option value="Helsinki">Helsinki</option>
-              <option value="Honiara">Honiara</option>
-              <option value="Islamabad">Islamabad</option>
-              <option value="Jakarta">Jakarta</option>
-              <option value="Jamestown">Jamestown</option>
-              <option value="Jerusalem">Jerusalem</option>
-              <option value="Juba">Juba</option>
-              <option value="Kabul">Kabul</option>
-              <option value="Kampala">Kampala</option>
-              <option value="Kathmandu">Kathmandu</option>
-              <option value="Khartoum">Khartoum</option>
-              <option value="Kigali">Kigali</option>
-              <option value="King Edward Point">King Edward Point</option>
-              <option value="Kingston">Kingston</option>
-              <option value="Kingston">Kingston</option>
-              <option value="Kingstown">Kingstown</option>
-              <option value="Kinshasa">Kinshasa</option>
-              <option value="Kralendijk">Kralendijk</option>
-              <option value="Kuala Lumpur">Kuala Lumpur</option>
-              <option value="Kuwait City">Kuwait City</option>
-              <option value="Kyiv">Kyiv</option>
-              <option value="Libreville">Libreville</option>
-              <option value="Lilongwe">Lilongwe</option>
-              <option value="Lima">Lima</option>
-              <option value="Lisbon">Lisbon</option>
-              <option value="Ljubljana">Ljubljana</option>
-              <option value="Lomé">Lomé</option>
-              <option value="London">London</option>
-              <option value="Longyearbyen">Longyearbyen</option>
-              <option value="Luanda">Luanda</option>
-              <option value="Lusaka">Lusaka</option>
-              <option value="Luxembourg">Luxembourg</option>
-              <option value="Madrid">Madrid</option>
-              <option value="Majuro">Majuro</option>
-              <option value="Malabo">Malabo</option>
-              <option value="Malé">Malé</option>
-              <option value="Mamoudzou">Mamoudzou</option>
-              <option value="Managua">Managua</option>
-              <option value="Manama">Manama</option>
-              <option value="Manila">Manila</option>
-              <option value="Maputo">Maputo</option>
-              <option value="Mariehamn">Mariehamn</option>
-              <option value="Marigot">Marigot</option>
-              <option value="Maseru">Maseru</option>
-              <option value="Mata-Utu">Mata-Utu</option>
-              <option value="Mbabane">Mbabane</option>
-              <option value="Mexico City">Mexico City</option>
-              <option value="Minsk">Minsk</option>
-              <option value="Mogadishu">Mogadishu</option>
-              <option value="Monaco">Monaco</option>
-              <option value="Monrovia">Monrovia</option>
-              <option value="Montevideo">Montevideo</option>
-              <option value="Moroni">Moroni</option>
-              <option value="Moscow">Moscow</option>
-              <option value="Muscat">Muscat</option>
-              <option value="N'Djamena">N'Djamena</option>
-              <option value="Nairobi">Nairobi</option>
-              <option value="Nassau">Nassau</option>
-              <option value="Naypyidaw">Naypyidaw</option>
-              <option value="New Delhi">New Delhi</option>
-              <option value="Ngerulmud">Ngerulmud</option>
-              <option value="Niamey">Niamey</option>
-              <option value="Nicosia">Nicosia</option>
-              <option value="Nouakchott">Nouakchott</option>
-              <option value="Nouméa">Nouméa</option>
-              <option value="Nuku'alofa">Nuku'alofa</option>
-              <option value="Nur-Sultan">Nur-Sultan</option>
-              <option value="Nuuk">Nuuk</option>
-              <option value="Oranjestad">Oranjestad</option>
-              <option value="Oslo">Oslo</option>
-              <option value="Ottawa">Ottawa</option>
-              <option value="Ouagadougou">Ouagadougou</option>
-              <option value="Pago Pago">Pago Pago</option>
-              <option value="Palikir">Palikir</option>
-              <option value="Panama City">Panama City</option>
-              <option value="Papeeté">Papeeté</option>
-              <option value="Paramaribo">Paramaribo</option>
-              <option value="Paris">Paris</option>
-              <option value="Philipsburg">Philipsburg</option>
-              <option value="Phnom Penh">Phnom Penh</option>
-              <option value="Plymouth">Plymouth</option>
-              <option value="Podgorica">Podgorica</option>
-              <option value="Port Louis">Port Louis</option>
-              <option value="Port Moresby">Port Moresby</option>
-              <option value="Port of Spain">Port of Spain</option>
-              <option value="Port Vila">Port Vila</option>
-              <option value="Port-au-Prince">Port-au-Prince</option>
-              <option value="Port-aux-Français">Port-aux-Français</option>
-              <option value="Porto-Novo">Porto-Novo</option>
-              <option value="Prague">Prague</option>
-              <option value="Praia">Praia</option>
-              <option value="Pretoria">Pretoria</option>
-              <option value="Pristina">Pristina</option>
-              <option value="Pyongyang">Pyongyang</option>
-              <option value="Quito">Quito</option>
-              <option value="Rabat">Rabat</option>
-              <option value="Ramallah">Ramallah</option>
-              <option value="Reykjavik">Reykjavik</option>
-              <option value="Riga">Riga</option>
-              <option value="Riyadh">Riyadh</option>
-              <option value="Road Town">Road Town</option>
-              <option value="Rome">Rome</option>
-              <option value="Roseau">Roseau</option>
-              <option value="Saint Helier">Saint Helier</option>
-              <option value="Saint John's">Saint John's</option>
-              <option value="Saint-Denis">Saint-Denis</option>
-              <option value="Saint-Pierre">Saint-Pierre</option>
-              <option value="Saipan">Saipan</option>
-              <option value="San José">San José</option>
-              <option value="San Juan">San Juan</option>
-              <option value="San Salvador">San Salvador</option>
-              <option value="Sana'a">Sana'a</option>
-              <option value="Santiago">Santiago</option>
-              <option value="Santo Domingo">Santo Domingo</option>
-              <option value="São Tomé">São Tomé</option>
-              <option value="Sarajevo">Sarajevo</option>
-              <option value="Seoul">Seoul</option>
-              <option value="Singapore">Singapore</option>
-              <option value="Skopje">Skopje</option>
-              <option value="Sofia">Sofia</option>
-              <option value="South Tarawa">South Tarawa</option>
-              <option value="Sri Jayawardenepura Kotte">Sri Jayawardenepura Kotte</option>
-              <option value="St. George's">St. George's</option>
-              <option value="St. Peter Port">St. Peter Port</option>
-              <option value="Stanley">Stanley</option>
-              <option value="Stockholm">Stockholm</option>
-              <option value="Sucre">Sucre</option>
-              <option value="Suva">Suva</option>
-              <option value="Taipei">Taipei</option>
-              <option value="Tallinn">Tallinn</option>
-              <option value="Tashkent">Tashkent</option>
-              <option value="Tbilisi">Tbilisi</option>
-              <option value="Tegucigalpa">Tegucigalpa</option>
-              <option value="Tehran">Tehran</option>
-              <option value="The Valley">The Valley</option>
-              <option value="Thimphu">Thimphu</option>
-              <option value="Tirana">Tirana</option>
-              <option value="Tokyo">Tokyo"</option>
-              <option value="Tórshavn">Tórshavn</option>
-              <option value="Tripoli">Tripoli</option>
-              <option value="Tunis">Tunis</option>
-              <option value="Ulan Bator">Ulan Bator</option>
-              <option value="undefined">undefined</option>
-              <option value="Vaduz">Vaduz</option>
-              <option value="Valletta">Valletta</option>
-              <option value="Vatican City">Vatican City</option>
-              <option value="Victoria">Victoria</option>
-              <option value="Vienna">Vienna</option>
-              <option value="Vientiane">Vientiane</option>
-              <option value="Vilnius">Vilnius</option>
-              <option value="Warsaw">Warsaw</option>
-              <option value="Washington DC">Washington DC</option>
-              <option value="Washington, D.C.">Washington, D.C.</option>
-              <option value="Wellington">Wellington</option>
-              <option value="West Island">West Island</option>
-              <option value="Willemstad">Willemstad</option>
-              <option value="Windhoek">Windhoek</option>
-              <option value="Yamoussoukro">Yamoussoukro</option>
-              <option value="Yaoundé">Yaoundé</option>
-              <option value="Yaren">Yaren</option>
-              <option value="Yerevan">Yerevan</option>
-              <option value="Zagreb">Zagreb</option>
-            </select>
-          </div>
-          
-          <!-- Budget -->
-          <div class="col d-flex justify-content-center">
-           
-            <input class="mx-2 " type="number" id="inputBudget" name="inputBudget" min="0" max="5000" [formControl]="budget">
-          </div>
-
+        <!-- Destination -->
+        <div class="col mx-2 ">
+          <select class="form-select" aria-label="Default select example" [formControl]="inputDestination">
+        
+            <option selected>Destination</option>
+        
+            <option value="Abu Dhabi">Abu Dhabi</option>
+            <option value="Abuja">Abuja</option>
+            <option value="Accra">Accra</option>
+            <option value="Adamstown">Adamstown</option>
+            <option value="Addis Ababa">Addis Ababa</option>
+            <option value="Algiers">Algiers</option>
+            <option value="Alofi">Alofi</option>
+            <option value="Amman">Amman</option>
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Andorra la Vella">Andorra la Vella</option>
+            <option value="Ankara">Ankara</option>
+            <option value="Antananarivo">Antananarivo</option>
+            <option value="Apia">Apia</option>
+            <option value="Ashgabat">Ashgabat</option>
+            <option value="Asmara">Asmara</option>
+            <option value="Asunción">Asunción</option>
+            <option value="Athens">Athens</option>
+            <option value="Avarua">Avarua</option>
+            <option value="Baghdad">Baghdad</option>
+            <option value="Baku">Baku</option>
+            <option value="Bamako">Bamako</option>
+            <option value="Bandar Seri Begawan">Bandar Seri Begawan</option>
+            <option value="Bangkok">Bangkok</option>
+            <option value="Bangui">Bangui</option>
+            <option value="Banjul">Banjul</option>
+            <option value="Basse-Terre">Basse-Terre</option>
+            <option value="Basseterre">Basseterre</option>
+            <option value="Beijing">Beijing</option>
+            <option value="Beirut">Beirut</option>
+            <option value="Belgrade">Belgrade</option>
+            <option value="Belmopan">Belmopan</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Bern">Bern</option>
+            <option value="Bishkek">Bishkek</option>
+            <option value="Bissau">Bissau</option>
+            <option value="Bogotá">Bogotá</option>
+            <option value="Brasília">Brasília</option>
+            <option value="Bratislava">Bratislava</option>
+            <option value="Brazzaville">Brazzaville</option>
+            <option value="Bridgetown">Bridgetown</option>
+            <option value="Brussels">Brussels</option>
+            <option value="Bucharest">Bucharest</option>
+            <option value="Budapest">Budapest</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Cairo">Cairo</option>
+            <option value="Canberra">Canberra</option>
+            <option value="Caracas">Caracas</option>
+            <option value="Castries">Castries</option>
+            <option value="Cayenne">Cayenne</option>
+            <option value="Charlotte Amalie">Charlotte Amalie</option>
+            <option value="City of San Marino">City of San Marino</option>
+            <option value="City of Victoria">City of Victoria</option>
+            <option value="Cockburn Town">Cockburn Town</option>
+            <option value="Conakry">Conakry</option>
+            <option value="Copenhagen">Copenhagen</option>
+            <option value="Dakar">Dakar</option>
+            <option value="Damascus">Damascus</option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Diego Garcia">Diego Garcia</option>
+            <option value="Dili">Dili</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Dodoma">Dodoma</option>
+            <option value="Doha">Doha</option>
+            <option value="Douglas">Douglas</option>
+            <option value="Dublin">Dublin</option>
+            <option value="Dushanbe">Dushanbe</option>
+            <option value="El Aaiún">El Aaiún</option>
+            <option value="Fakaofo">Fakaofo</option>
+            <option value="Flying Fish Cove">Flying Fish Cove</option>
+            <option value="Fort-de-France">Fort-de-France</option>
+            <option value="Freetown">Freetown</option>
+            <option value="Funafuti">Funafuti</option>
+            <option value="Gaborone">Gaborone</option>
+            <option value="George Town">George Town</option>
+            <option value="Georgetown">Georgetown</option>
+            <option value="Gibraltar">Gibraltar</option>
+            <option value="Gitega">Gitega</option>
+            <option value="Guatemala City">Guatemala City</option>
+            <option value="Gustavia">Gustavia</option>
+            <option value="Hagåtña">Hagåtña</option>
+            <option value="Hamilton">Hamilton</option>
+            <option value="Hanoi">Hanoi</option>
+            <option value="Harare">Harare</option>
+            <option value="Havana">Havana</option>
+            <option value="Helsinki">Helsinki</option>
+            <option value="Honiara">Honiara</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Jakarta">Jakarta</option>
+            <option value="Jamestown">Jamestown</option>
+            <option value="Jerusalem">Jerusalem</option>
+            <option value="Juba">Juba</option>
+            <option value="Kabul">Kabul</option>
+            <option value="Kampala">Kampala</option>
+            <option value="Kathmandu">Kathmandu</option>
+            <option value="Khartoum">Khartoum</option>
+            <option value="Kigali">Kigali</option>
+            <option value="King Edward Point">King Edward Point</option>
+            <option value="Kingston">Kingston</option>
+            <option value="Kingston">Kingston</option>
+            <option value="Kingstown">Kingstown</option>
+            <option value="Kinshasa">Kinshasa</option>
+            <option value="Kralendijk">Kralendijk</option>
+            <option value="Kuala Lumpur">Kuala Lumpur</option>
+            <option value="Kuwait City">Kuwait City</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Libreville">Libreville</option>
+            <option value="Lilongwe">Lilongwe</option>
+            <option value="Lima">Lima</option>
+            <option value="Lisbon">Lisbon</option>
+            <option value="Ljubljana">Ljubljana</option>
+            <option value="Lomé">Lomé</option>
+            <option value="London">London</option>
+            <option value="Longyearbyen">Longyearbyen</option>
+            <option value="Luanda">Luanda</option>
+            <option value="Lusaka">Lusaka</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Majuro">Majuro</option>
+            <option value="Malabo">Malabo</option>
+            <option value="Malé">Malé</option>
+            <option value="Mamoudzou">Mamoudzou</option>
+            <option value="Managua">Managua</option>
+            <option value="Manama">Manama</option>
+            <option value="Manila">Manila</option>
+            <option value="Maputo">Maputo</option>
+            <option value="Mariehamn">Mariehamn</option>
+            <option value="Marigot">Marigot</option>
+            <option value="Maseru">Maseru</option>
+            <option value="Mata-Utu">Mata-Utu</option>
+            <option value="Mbabane">Mbabane</option>
+            <option value="Mexico City">Mexico City</option>
+            <option value="Minsk">Minsk</option>
+            <option value="Mogadishu">Mogadishu</option>
+            <option value="Monaco">Monaco</option>
+            <option value="Monrovia">Monrovia</option>
+            <option value="Montevideo">Montevideo</option>
+            <option value="Moroni">Moroni</option>
+            <option value="Moscow">Moscow</option>
+            <option value="Muscat">Muscat</option>
+            <option value="N'Djamena">N'Djamena</option>
+            <option value="Nairobi">Nairobi</option>
+            <option value="Nassau">Nassau</option>
+            <option value="Naypyidaw">Naypyidaw</option>
+            <option value="New Delhi">New Delhi</option>
+            <option value="Ngerulmud">Ngerulmud</option>
+            <option value="Niamey">Niamey</option>
+            <option value="Nicosia">Nicosia</option>
+            <option value="Nouakchott">Nouakchott</option>
+            <option value="Nouméa">Nouméa</option>
+            <option value="Nuku'alofa">Nuku'alofa</option>
+            <option value="Nur-Sultan">Nur-Sultan</option>
+            <option value="Nuuk">Nuuk</option>
+            <option value="Oranjestad">Oranjestad</option>
+            <option value="Oslo">Oslo</option>
+            <option value="Ottawa">Ottawa</option>
+            <option value="Ouagadougou">Ouagadougou</option>
+            <option value="Pago Pago">Pago Pago</option>
+            <option value="Palikir">Palikir</option>
+            <option value="Panama City">Panama City</option>
+            <option value="Papeeté">Papeeté</option>
+            <option value="Paramaribo">Paramaribo</option>
+            <option value="Paris">Paris</option>
+            <option value="Philipsburg">Philipsburg</option>
+            <option value="Phnom Penh">Phnom Penh</option>
+            <option value="Plymouth">Plymouth</option>
+            <option value="Podgorica">Podgorica</option>
+            <option value="Port Louis">Port Louis</option>
+            <option value="Port Moresby">Port Moresby</option>
+            <option value="Port of Spain">Port of Spain</option>
+            <option value="Port Vila">Port Vila</option>
+            <option value="Port-au-Prince">Port-au-Prince</option>
+            <option value="Port-aux-Français">Port-aux-Français</option>
+            <option value="Porto-Novo">Porto-Novo</option>
+            <option value="Prague">Prague</option>
+            <option value="Praia">Praia</option>
+            <option value="Pretoria">Pretoria</option>
+            <option value="Pristina">Pristina</option>
+            <option value="Pyongyang">Pyongyang</option>
+            <option value="Quito">Quito</option>
+            <option value="Rabat">Rabat</option>
+            <option value="Ramallah">Ramallah</option>
+            <option value="Reykjavik">Reykjavik</option>
+            <option value="Riga">Riga</option>
+            <option value="Riyadh">Riyadh</option>
+            <option value="Road Town">Road Town</option>
+            <option value="Rome">Rome</option>
+            <option value="Roseau">Roseau</option>
+            <option value="Saint Helier">Saint Helier</option>
+            <option value="Saint John's">Saint John's</option>
+            <option value="Saint-Denis">Saint-Denis</option>
+            <option value="Saint-Pierre">Saint-Pierre</option>
+            <option value="Saipan">Saipan</option>
+            <option value="San José">San José</option>
+            <option value="San Juan">San Juan</option>
+            <option value="San Salvador">San Salvador</option>
+            <option value="Sana'a">Sana'a</option>
+            <option value="Santiago">Santiago</option>
+            <option value="Santo Domingo">Santo Domingo</option>
+            <option value="São Tomé">São Tomé</option>
+            <option value="Sarajevo">Sarajevo</option>
+            <option value="Seoul">Seoul</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Skopje">Skopje</option>
+            <option value="Sofia">Sofia</option>
+            <option value="South Tarawa">South Tarawa</option>
+            <option value="Sri Jayawardenepura Kotte">Sri Jayawardenepura Kotte</option>
+            <option value="St. George's">St. George's</option>
+            <option value="St. Peter Port">St. Peter Port</option>
+            <option value="Stanley">Stanley</option>
+            <option value="Stockholm">Stockholm</option>
+            <option value="Sucre">Sucre</option>
+            <option value="Suva">Suva</option>
+            <option value="Taipei">Taipei</option>
+            <option value="Tallinn">Tallinn</option>
+            <option value="Tashkent">Tashkent</option>
+            <option value="Tbilisi">Tbilisi</option>
+            <option value="Tegucigalpa">Tegucigalpa</option>
+            <option value="Tehran">Tehran</option>
+            <option value="The Valley">The Valley</option>
+            <option value="Thimphu">Thimphu</option>
+            <option value="Tirana">Tirana</option>
+            <option value="Tokyo">Tokyo"</option>
+            <option value="Tórshavn">Tórshavn</option>
+            <option value="Tripoli">Tripoli</option>
+            <option value="Tunis">Tunis</option>
+            <option value="Ulan Bator">Ulan Bator</option>
+            <option value="undefined">undefined</option>
+            <option value="Vaduz">Vaduz</option>
+            <option value="Valletta">Valletta</option>
+            <option value="Vatican City">Vatican City</option>
+            <option value="Victoria">Victoria</option>
+            <option value="Vienna">Vienna</option>
+            <option value="Vientiane">Vientiane</option>
+            <option value="Vilnius">Vilnius</option>
+            <option value="Warsaw">Warsaw</option>
+            <option value="Washington DC">Washington DC</option>
+            <option value="Washington, D.C.">Washington, D.C.</option>
+            <option value="Wellington">Wellington</option>
+            <option value="West Island">West Island</option>
+            <option value="Willemstad">Willemstad</option>
+            <option value="Windhoek">Windhoek</option>
+            <option value="Yamoussoukro">Yamoussoukro</option>
+            <option value="Yaoundé">Yaoundé</option>
+            <option value="Yaren">Yaren</option>
+            <option value="Yerevan">Yerevan</option>
+            <option value="Zagreb">Zagreb</option>
+          </select>
+        </div>
+        
+        <!-- Budget -->
+        <div class="col d-flex justify-content-center">
+         
+          <input class="mx-2 " type="number" id="inputBudget" name="inputBudget" min="0" max="5000" [formControl]="budget">
         </div>
 
       </div>
 
-      <!-- Validation des informations (bouton) -->
-      <div class="container d-flex justify-content-center my-5">
-        <div class="row">
-          <div class="col my-5">
-            <a (click)="afficherResultat()" class="btn btn-primary">Rechercher</a>
-          </div>
+    </div>
+
+    <!-- Validation des informations (bouton) -->
+    <div class="container d-flex justify-content-center my-5">
+      <div class="row">
+        <div class="col my-5">
+          <a (click)="afficherResultat()" class="btn btn-primary">Rechercher</a>
         </div>
       </div>
+    </div>
 <!-- <img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" [alt]="iconMeteo"> -->
 
 <!-- <img [src]="image" alt="imageDestination"> -->
 
-    </section>
-    <section class="gallery"></section>
-  </main>
- 
+  </section>
+<div class="gallery__container"></div>
+<div class="gallery__container"></div>
+<div class="gallery__container"></div>
+<div class="gallery__container"></div>
+</main>
+    <!-- Optional JavaScript; choose one of the two! -->
 
-  <!--Script Bootsrap-->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-    crossorigin="anonymous"></script>
-  <script type="text/javascript" src="/JS/script.js"></script>
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-</body>
-
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
 </html>
