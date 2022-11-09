@@ -51,3 +51,7 @@ import 'zone.js';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+ import 'jquery';
+ import '@popperjs/core';
+ import 'bootstrap';

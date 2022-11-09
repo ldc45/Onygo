@@ -13,6 +13,7 @@ export class AppComponent implements OnInit  {
 //Déclaration des variables
 
 public logo ="assets/images/Pink_Minimalist_Planet_Travel_Logo_Design_1.png"
+public testimage ="assets/images/maldives.jpg"
 public monTitre : string;
 public monIntroduction : string;
 public montant : any;
@@ -32,6 +33,7 @@ private cleApi3 = "goLxS35I_CQHM3MjK7FPnznmQrKYGksKqEjSsu5UfrE";
 inputDepart = new FormControl('');
 inputDestination = new FormControl('');
 budget= new FormControl('');
+data: any;
 
 constructor(private http: HttpClient){ 
 this.monTitre = "Onygo";
