@@ -24,6 +24,7 @@ public description : any;
 public image : any;
 public alphaCode : any;
 public langage :any;
+public nomMonnaie : any;
 
 private cleApi = "a92b35e3151ed3389e3aac02";
 private cleApi2 = "b9df352c5184221ff36bf83de98355c8";
@@ -51,12 +52,12 @@ public afficherResultat(){
 
   return this.http.get(`https://restcountries.com/v2/capital/${this.inputDestination.value}`)
   .subscribe((data:any) => {
-    this.codeDestination=data[0]['currencies'][0]['code'],data[0]['currencies'][0]['name'], this.alphaCode=data[0]['alpha2Code'],console.log(data[0]['languages'][0]['iso639_1'])
+    this.codeDestination=data[0]['currencies'][0]['code'],this.nomMonnaie=data[0]['currencies'][0]['name'], this.alphaCode=data[0]['alpha2Code'],this.langage=data[0]['languages'][0]['iso639_1']
 
   return this.http.get(`https://v6.exchangerate-api.com/v6/${this.cleApi}/pair/${this.codeDepart}/${this.codeDestination}/${this.budget.value}`)
-  .subscribe((data:any) => {this.montant = new Intl.NumberFormat('de-DE', { style: 'currency', currency: `${this.codeDestination}` }).format(data.conversion_result);
+  .subscribe((data:any) => {this.montant = new Intl.NumberFormat(`${this.langage}-${this.alphaCode}`, { style: 'currency', currency: `${this.codeDestination}` }).format(data.conversion_result);
 
- return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.inputDestination.value}&appid=${this.cleApi2}`)
+ return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.inputDestination.value}&lang=fr&appid=${this.cleApi2}`)
  .subscribe((data:any) => {this.temperature = (data['main']['temp']-273.15).toFixed(0), this.codeImage = data['weather'][0]['icon'], this.description = data['weather'][0]['description']
 
  return this.http.get(`https://api.unsplash.com/search/photos?client_id=${this.cleApi3}&query=${this.inputDestination.value}`)
