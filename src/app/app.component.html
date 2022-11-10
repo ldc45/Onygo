@@ -1,4 +1,13 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 
 <main>
 
   <img id="img1" [src]="logo">
@@ -24,7 +33,7 @@
         <div class="col mx-5">
           <select class="form-select" aria-label="Default select example" [formControl]="inputDepart">
 
-            <option selected>Départ</option>
+            <option selected value>Départ</option>
             
             <option value="Abu Dhabi">Abu Dhabi</option>
             <option value="Abuja">Abuja</option>
@@ -279,7 +288,7 @@
         <div class="col mx-2 ">
           <select class="form-select" aria-label="Default select example" [formControl]="inputDestination">
         
-            <option selected>Destination</option>
+            <option selected value>Destination</option>
         
             <option value="Abu Dhabi">Abu Dhabi</option>
             <option value="Abuja">Abuja</option>
@@ -533,7 +542,7 @@
         <!-- Budget -->
         <div class="col d-flex justify-content-center">
          
-          <input class="mx-2 " type="number" id="inputBudget" name="inputBudget" min="0" max="5000" [formControl]="budget">
+          <input placeholder="Budget" class="mx-2 " type="number" id="inputBudget" name="inputBudget" min="0" max="5000" [formControl]="budget">
         </div>
 
       </div>
@@ -550,12 +559,11 @@
     </div>
 <!-- <img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" [alt]="iconMeteo"> -->
 
-<!-- <img [src]="image" alt="imageDestination"> -->
-
   </section>
   
 </main>
- <div id="carouselExampleControls" class="carousel slide w-50" data-bs-ride="carousel">
+
+ <div id="carouselExampleControls" class="carousel slide w-25" data-bs-ride="false">
   <div class="carousel-inner">
     <div class="carousel-item active gallery__container">
   
@@ -576,4 +584,5 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
