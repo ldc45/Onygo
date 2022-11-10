@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit  {
   title = 'Onygo';
 
@@ -25,6 +26,7 @@ public image : any;
 public alphaCode : any;
 public langage :any;
 
+
 private cleApi = "a92b35e3151ed3389e3aac02";
 private cleApi2 = "b9df352c5184221ff36bf83de98355c8";
 private cleApi3 = "goLxS35I_CQHM3MjK7FPnznmQrKYGksKqEjSsu5UfrE";
@@ -40,9 +42,9 @@ this.monTitre = "Onygo";
 this.monIntroduction = "Avec Onygo voyage à travers le monde !";
 }
 
-ngOnInit():void{
 
-}
+ngOnInit():void{
+ }
 
 public afficherResultat(){
 
@@ -87,3 +89,10 @@ public afficherResultat(){
 });
 }
 }
+
+declare global {
+  interface Window {
+    myWidgetParam: any; // 
+  }}
+
+  window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 17,cityid: '2643743',appid: 'b9df352c5184221ff36bf83de98355c8',units: 'metric',containerid: 'openweathermap-widget-17',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode?.insertBefore(script, s);  })();
