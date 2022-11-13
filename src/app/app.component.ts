@@ -9,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit  {
   title = 'Onygo';
+  showMe : boolean=false
+ 
 
 //Déclaration des variables
 
@@ -36,7 +38,7 @@ inputDestination = new FormControl('');
 budget= new FormControl('');
 
 
-constructor(private http: HttpClient){ 
+constructor(private http: HttpClient){
 this.monTitre = "Onygo";
 this.monIntroduction = "Avec Onygo voyage à travers le monde !";
 }
@@ -72,13 +74,14 @@ public afficherResultat(){
     //La propriété className de l'interface Element récupère et définit la valeur de l'attribut class de l'élément spécifié.
     img.className = 'gallery--img'
     // Nous avons ensuite récupéré l'élément ayant pour class "gallery"
-  
+
     const galleryContainers = document.querySelectorAll('.gallery__container');
-   //Nous avons ajouté notre nouvel élément dans les enfants de l'élément 
-    galleryContainers[i]?.appendChild(img) 
+   //Nous avons ajouté notre nouvel élément dans les enfants de l'élément
+    galleryContainers[i]?.appendChild(img)
     //La propriété appendChild sur gallery peut être null, ce qui provoque une erreur.Nous pouvons utiliser l'opérateur de chaînage optionnel (?.) pour contourner ce problème.
-   } 
-  
+   }
+   this.showMe=!this.showMe
+
   //this.image=data['results'][this.rand]['urls']['regular']
 
  });
