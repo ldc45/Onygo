@@ -64,11 +64,18 @@ height: 25px;
   
   }
 
+.gallery{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
 
 .gallery--img{
-display: block;
-  width: 25%;
- 
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
   
 
@@ -106,5 +113,150 @@ display: block;
   }
 }
 
+/* CARD METEO */
+.card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: white 2px solid;
+  border-radius: 35px;
+  width: 600px;
+  height: 285x;
+  background-color: #343F3E;
+}
+
+.card-left{
+  background-image:  linear-gradient(rgba(4, 76, 109, 0.5), rgba(112, 122, 181, 0.3)), url(https://images.unsplash.com/photo-1580655653885-65763b2597d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 45%;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid white;
+}
+
+.card-left-details{
+  padding: 10px;
+}
+
+h1{
+  font-size: 20px;
+}
+
+h2, .location{
+  font-size: 20px;
+  margin-top: 35px;
+}
+.logo_sun{
+  font-size: 80px;
+}
+.card-left-temp, .card-left-deg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size:  30px ;
+}
+/*card right*/
+
+.card-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 55%;
+  height: 100%;
+}
+
+.card-right-detail{
+  width: 70%;
+}
+
+.card-right-meteo-day{
+  background: rgb(43 43 43 / 50%);
+  display: flex;
+  height: auto;
+  border-radius: 20px;
 
 
+}
+
+.percepetion , .Humidity, .Wind{
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.btn-meteo{
+  width: 50px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+
+  
+
+}
+
+.btn-meteo:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.btn-cahnge-location{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn_location{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: white;
+  letter-spacing: 3px;
+  padding: 10px;
+  font-size: 18px;
+  background: linear-gradient(rgba(4, 76, 109, 0.5), rgba(112, 122, 181, 0.8));
+}
+  
+#ID_inputcity{
+  position: absolute;
+  top: 50px;
+  border: none;
+  padding: 10px 15px;
+}
+
+#inputvalidation{
+  position: absolute;
+  top: 120px;
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+} 
+
+#codeImage{
+background-color: rgba(255, 255, 255, 0.5);
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 80px;
+width: 80px;;
+}
+
+
+.all_cards{
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
- 
 <main>
 
   <img id="img1" [src]="logo">
@@ -24,7 +14,7 @@
     </div>
 
 
-  <!-- Inputs de l'utilisateur -->
+    <!-- Inputs de l'utilisateur -->
     <div class="container d-flex justify-content-center">
 
       <div class="row">
@@ -33,8 +23,8 @@
         <div class="col mx-5">
           <select class="form-select" aria-label="Default select example" [formControl]="inputDepart">
 
-            <option selected value>Départ</option>
-            
+            <option selected>Départ</option>
+
             <option value="Abu Dhabi">Abu Dhabi</option>
             <option value="Abuja">Abuja</option>
             <option value="Accra">Accra</option>
@@ -287,9 +277,9 @@
         <!-- Destination -->
         <div class="col mx-2 ">
           <select class="form-select" aria-label="Default select example" [formControl]="inputDestination">
-        
-            <option selected value>Destination</option>
-        
+
+            <option selected>Destination</option>
+
             <option value="Abu Dhabi">Abu Dhabi</option>
             <option value="Abuja">Abuja</option>
             <option value="Accra">Accra</option>
@@ -532,17 +522,19 @@
             <option value="Willemstad">Willemstad</option>
             <option value="Windhoek">Windhoek</option>
             <option value="Yamoussoukro">Yamoussoukro</option>
+
             <option value="Yaoundé">Yaoundé</option>
             <option value="Yaren">Yaren</option>
             <option value="Yerevan">Yerevan</option>
             <option value="Zagreb">Zagreb</option>
           </select>
         </div>
-        
+
         <!-- Budget -->
         <div class="col d-flex justify-content-center">
-         
-          <input placeholder="Budget" class="mx-2 " type="number" id="inputBudget" name="inputBudget" min="0" max="5000" [formControl]="budget">
+
+          <input class="mx-2 " type="number" id="inputBudget" name="inputBudget" min="0" max="5000"
+            [formControl]="budget">
         </div>
 
       </div>
@@ -557,14 +549,234 @@
         </div>
       </div>
     </div>
-<!-- <img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" [alt]="iconMeteo"> -->
+    <!-- <img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" [alt]="iconMeteo"> -->
+
+    <!-- <img [src]="image" alt="imageDestination"> -->
 
   </section>
-  
+
 </main>
 
 
-<div id="openweathermap-widget-17"></div>
-<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 17,cityid: '2643743',appid: 'b9df352c5184221ff36bf83de98355c8',units: 'metric',containerid: 'openweathermap-widget-17',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
-</body>
-</html>
+   
+
+  
+
+<div class="all_cards">
+
+<div class="card">
+
+      <div class="card-left">
+
+        <div class="card-left-details text-white">
+          <h1 id=>{{jour}}</h1>
+          <h2 id="ID_dateDuJour">{{date}}</h2>
+          <h3>{{cityName}}</h3>
+
+        </div>
+
+        <div class="card-left-temp">
+
+          <div class="card-left-deg text-white">
+            <p id="ID_temp">{{temp}}</p>
+            <div id="codeImage"><img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" alt="iconMeteo"></div>
+            <p id="ID_tempDescription">{{description}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-right">
+        <div class="card-right-detail">
+          <div class="percepetion text-white">
+            <p>Ressenti</p>
+            <p id="ID_perception">{{feels}}</p>
+          </div>
+          <div class="Humidity text-white">
+            <p>Humidité</p>
+            <p id="ID_humidity">{{humidity}}%</p>
+          </div>
+          <div class="Wind text-white">
+            <p>Vitesse du vent</p>
+            <p id="ID_wind">{{windSpeed}} m/sec</p>
+          </div>
+        </div>
+
+
+        <div class="card-right-meteo-day">
+          <button class="btn-meteo">
+          </button>
+          <button class="btn-meteo">
+          </button>
+          <button class="btn-meteo">
+          </button>
+          <button class="btn-meteo">
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-left">
+
+        <div class="card-left-details text-white">
+          <h1 id=></h1>
+          <h2 id="ID_dateDuJour">{{date}}</h2>
+          <h3>{{cityName}}</h3>
+
+        </div>
+
+        <div class="card-left-temp">
+
+          <div class="card-left-deg text-white">
+            <p id="ID_temp">{{temp}}</p>
+            <div id="codeImage"><img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" alt="iconMeteo"></div>
+            <p id="ID_tempDescription">{{description}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-right">
+        <div class="card-right-detail">
+          <div class="percepetion text-white">
+            <p>Ressenti</p>
+            <p id="ID_perception">{{feels}}</p>
+          </div>
+          <div class="Humidity text-white">
+            <p>Humidité</p>
+            <p id="ID_humidity">{{humidity}}%</p>
+          </div>
+          <div class="Wind text-white">
+            <p>Vitesse du vent</p>
+            <p id="ID_wind">{{windSpeed}} m/sec</p>
+          </div>
+        </div>
+
+
+        <div class="card-right-meteo-day">
+          <button class="btn-meteo">
+
+            <p>Tue</p>
+            <p>29&deg</p>
+          </button>
+          <button class="btn-meteo">
+
+            <p>Tue</p>
+            <p>29&deg</p>
+          </button>
+          <button class="btn-meteo">
+
+            <p>Tue</p>
+            <p>29&deg</p>
+          </button>
+          <button class="btn-meteo">
+
+            <p>Tue</p>
+            <p>29&deg</p>
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+    <div id="carouselExampleControls" class="carousel slide w-50" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active gallery__container">
+
+        </div>
+        <div class="carousel-item gallery__container">
+
+        </div>
+        <div class="carousel-item gallery__container">
+
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+<!-- <div class="card">
+
+  <div class="card-left">
+
+      <div class="card-left-details">
+          <h1 id=></h1>
+          <h2 id="ID_dateDuJour"></h2>
+          <span class="location" id="ID_city"><iconify-icon icon="entypo:location-pin"></iconify-icon></span>
+          
+      </div>
+
+      <div class="card-left-temp">
+          <span class="logo_sun"><iconify-icon icon="emojione:sun"></iconify-icon></span>
+          <div class="card-left-deg">
+              <p id="ID_temp"></p>
+              <p id="ID_tempDescription"></p>
+          </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="card-right">
+      <div class="card-right-detail">
+          <div class="percepetion">
+              <p>Perception</p>
+              <p id="ID_perception"></p>
+          </div>
+          <div class="Humidity">
+              <p>Humidity</p>
+              <p id="ID_humidity"></p>
+          </div>
+          <div class="Wind">
+              <p>Wind</p>
+              <p id="ID_wind"></p>
+          </div>
+      </div>
+
+
+      <div class="card-right-meteo-day">
+          <button class="btn-meteo">
+              <iconify-icon icon="emojione:sun"></iconify-icon>
+              <p>Tue</p>
+              <p>29&deg</p>
+          </button>
+          <button class="btn-meteo">
+              <iconify-icon icon="emojione:sun"></iconify-icon>
+              <p>Tue</p>
+              <p>29&deg</p>
+          </button>
+          <button class="btn-meteo">
+              <iconify-icon icon="emojione:sun"></iconify-icon>
+              <p>Tue</p>
+              <p>29&deg</p>
+          </button>
+          <button class="btn-meteo">
+              <iconify-icon icon="emojione:sun"></iconify-icon>
+              <p>Tue</p>
+              <p>29&deg</p>
+          </button>
+      </div>
+
+
+  </div>
+</div> -->
+
+
+<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
