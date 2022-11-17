@@ -31,6 +31,8 @@ public image : any;
 public date: any;
 public jour:any;
 public continent : any;
+public alphaCode : any;
+public langage :any;
 
 
 
@@ -69,7 +71,7 @@ public afficherResultat(){
  this.date =  new Date().toLocaleString('fr-FR', {dateStyle: 'full',timeStyle:'medium',timeZone: `${this.continent}/${this.inputDestination.value}`});
 
   return this.http.get(`https://v6.exchangerate-api.com/v6/${this.cleApi}/pair/${this.codeDepart}/${this.codeDestination}/${this.budget.value}`)
-  .subscribe((data:any) => {this.montant = data.conversion_result.toFixed(2)
+  .subscribe((data:any) => {this.montant = new Intl.NumberFormat(`${this.langage}-${this.alphaCode}`, { style: 'currency', currency: `${this.codeDestination}` }).format(data.conversion_result);
 
  return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.inputDestination.value}&lang=fr&appid=${this.cleApi2}&units=metric`)
  .subscribe((data:any) => { 
@@ -85,7 +87,9 @@ public afficherResultat(){
 
  return this.http.get(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${this.inputDestination.value}&cnt=5&lang=fr&appid=${this.cleApi2}&units=metric`)
  .subscribe((data:any) => { 
+
   const jourSemaine = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi', 'Vendredi', 'Samedi'] 
+
   for (let i = 1, j = 0; i<5; i++, j++){
     
     const dt = data.list[i].dt
