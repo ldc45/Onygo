@@ -1,23 +1,21 @@
-
-
 /* CSS à re-factoriser car certains sélecteurs sont inutilisés */
 
 main {
-  background:rgba(0, 0, 0, 0.619) url("../assets/images/maldives.jpg");
+  background: rgba(0, 0, 0, 0.619) url("../assets/images/maldives.jpg");
   background-repeat: no-repeat;
-  background-position:bottom;
-  background-blend-mode:darken;
+  background-position: bottom;
+  background-blend-mode: darken;
   background-size: cover;
-  height:100vh;
+  height: 100vh;
 }
 
 #titre {
-font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 #line2 {
 
-  margin-top:20px;
+  margin-top: 20px;
   color: inherit;
   background-color: currentColor;
   border: 0;
@@ -26,96 +24,101 @@ font-family:'Times New Roman', Times, serif;
 }
 
 
-  #img1 {
+#img1 {
 
-    height: 300px;
-    width: 300px;
-    margin-left: -45px;
-    margin-top: 10px;
-    
-  }
-  
-  .form-control {
-height: 25px;
+  height: 300px;
+  width: 300px;
+  margin-left: -45px;
+  margin-top: 10px;
 
-  }
+}
+
+.form-control {
+  height: 25px;
+
+}
 
 
-  label {
+label {
 
-    color: aliceblue;
-  }
+  color: aliceblue;
+}
 
-  .hr {
-    margin-top:50px;
-    color: inherit;
-    background-color: currentColor;
-    border: 0;
-    opacity: 0.2;
-  }
-  
-  #line2 {
-  
-    margin-top:20px;
-    color: inherit;
-    background-color: currentColor;
-    border: 0;
-    opacity: 0.2;
-  
-  }
+.hr {
+  margin-top: 50px;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.2;
+}
 
-.gallery{
+#line2 {
+
+  margin-top: 20px;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.2;
+
+}
+
+.gallery {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  
+
 }
 
-.gallery--img{
+.gallery--img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-  
+
 
 /* Ecran < 599px */
 
 @media (max-width: 768px) {
   .proj-grid {
 
- height: 100vh;
+    height: 100vh;
 
-  
+
   }
+
   main {
-    background-size:contain;
-    background-position:center;
-   background: local;
-   
-    background:rgba(0, 0, 0, 0.372) url(../assets/images/maldives.jpg);
+    background-size: contain;
+    background-position: center;
+    background: local;
+
+    background: rgba(0, 0, 0, 0.372) url(../assets/images/maldives.jpg);
     height: 100%;
     background-repeat: no-repeat;
-    
+
   }
+
   h1 {
-    font-size:large;
-   
+    font-size: large;
+
   }
+
   #img1 {
 
     height: 300px;
     width: 300px;
     margin-left: 5px;
   }
+
   #line1 {
-   margin: 20%;
+    margin: 20%;
   }
 }
 
-                    /* Mise en place du style de la card METEO */
+/* Mise en place du style de la card METEO */
 
-.card, .card_currency{
+.card,
+.card_currency {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -126,8 +129,8 @@ height: 25px;
   background-color: #343F3E;
 }
 
-.card-left{
-  background-image:  linear-gradient(rgba(4, 76, 109, 0.5), rgba(112, 122, 181, 0.3)), url(https://images.unsplash.com/photo-1580655653885-65763b2597d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+.card-left {
+  background-image: linear-gradient(rgba(4, 76, 109, 0.5), rgba(112, 122, 181, 0.3)), url(https://images.unsplash.com/photo-1580655653885-65763b2597d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
   background-position: center;
   background-size: cover;
   height: 100%;
@@ -139,32 +142,37 @@ height: 25px;
   outline: 2px solid white;
 }
 
-.card-left-details{
+.card-left-details {
   padding: 10px;
 }
 
-h1{
+h1 {
   font-size: 20px;
 }
 
-h2, .location{
+h2,
+.location {
   font-size: 20px;
   margin-top: 35px;
 }
-.logo_sun{
+
+.logo_sun {
   font-size: 80px;
 }
-.card-left-temp, .card-left-deg{
+
+.card-left-temp,
+.card-left-deg {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size:  30px ;
+  font-size: 30px;
 }
+
 /*card right*/
 
-.card-right{
+.card-right {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,11 +181,11 @@ h2, .location{
   height: 100%;
 }
 
-.card-right-detail{
+.card-right-detail {
   width: 70%;
 }
 
-.card-right-meteo-day{
+.card-right-meteo-day {
   background: rgb(43 43 43 / 50%);
   display: flex;
   height: auto;
@@ -186,7 +194,9 @@ h2, .location{
 
 }
 
-.percepetion , .Humidity, .Wind{
+.percepetion,
+.Humidity,
+.Wind {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
@@ -194,68 +204,49 @@ h2, .location{
   margin-top: 10px;
 }
 
-.btn-meteo{
+.btn-meteo {
   width: 50px;
   border: none;
   background: transparent;
   color: white;
   font-size: 18px;
-
-  
-
 }
 
-.btn-meteo:hover{
+.btn-meteo:hover {
   background-color: white;
   color: black;
   cursor: pointer;
 }
 
-.btn-cahnge-location{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 
-.btn_location{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  color: white;
-  letter-spacing: 3px;
-  padding: 10px;
-  font-size: 18px;
-  background: linear-gradient(rgba(4, 76, 109, 0.5), rgba(112, 122, 181, 0.8));
-}
-  
-#ID_inputcity{
+#ID_inputcity {
   position: absolute;
   top: 50px;
   border: none;
   padding: 10px 15px;
 }
 
-#inputvalidation{
+#inputvalidation {
   position: absolute;
   top: 120px;
   cursor: pointer;
   border: none;
   padding: 5px 10px;
-} 
+}
 
-#codeImage{
-background-color: rgba(255, 255, 255, 0.5);
-border-radius: 50%;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 80px;
-width: 80px;;
+#codeImage {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  ;
 }
 
 
-.all_cards{
+.all_cards {
   margin-top: 150px;
   display: flex;
   flex-wrap: wrap;
@@ -263,35 +254,41 @@ width: 80px;;
 }
 
 
-                    /* Mise en place du style de la card CURRENCIES */
+/* Mise en place du style de la card CURRENCIES */
 
 
-.card_currency{
+.card_currency {
   display: flex;
   justify-content: space-evenly;
 }
-svg{
+
+svg {
   color: white;
 }
-.flag_left, .flag_right{
+
+.flag_left,
+.flag_right {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.flag_left_img, .flag_right_img{
+
+.flag_left_img,
+.flag_right_img {
   width: 250px;
   height: 160px;
 }
 
-.flag_left img, .flag_right img{
-width: 100%;
-height: 100%;
-object-fit: cover;
-border-radius: 10px;
+.flag_left img,
+.flag_right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 
 }
 
-.montant{
+.montant {
   margin-top: 30px;
   color: white;
   font-size: 25px;
@@ -302,18 +299,96 @@ border-radius: 10px;
 }
 
 
-                    /* Mise en place du style du footer */
+/* Mise en place du style du footer */
 
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
 }
+
 .team-member img {
-  width: 14rem;
-  height: 14rem;
+  width: 10rem;
+  height: 10rem;
   border: 0.5rem solid rgba(0, 0, 0, 0.1);
 }
-.team-member h4, .team-member .h4 {
+
+.team-member h4,
+.team-member .h4 {
   margin-top: 1.5rem;
-  
+
+}
+
+/* Animation Fond principale toute écran  */
+
+main {
+  animation: change-background linear infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards ;
+  animation-timing-function:ease-in-out;
+  animation-play-state: running;
+  animation-duration: 30s;
+
+
+}
+
+@keyframes change-background {
+
+  0% {
+    background:rgba(0, 0, 0, 0.619) url("../assets/images/maldives.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-blend-mode:darken;
+    background-size: cover;
+    height:100vh;
+
+
+
+
+  }
+  20% {
+    background:rgba(0, 0, 0, 0.739) url("../assets/images/road-gd66647307_1920.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-blend-mode:darken;
+    background-size: cover;
+    height:100vh;
+
+
+  }
+  40% {
+      background:rgba(0, 0, 0, 0.619) url("../assets/images/mountains-g3de4b6be3_1920.jpg");
+      background-repeat: no-repeat;
+      background-position:center;
+      background-blend-mode:darken;
+      background-size: cover;
+      height:100vh;
+
+
+    }
+    60% {
+        background:rgba(0, 0, 0, 0.568) url("../assets/images/buildings-g02c50bf44_1920.jpg");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-blend-mode:darken;
+        background-size: cover;
+        height:100vh;
+
+
+  }
+  80% {
+    background:rgba(0, 0, 0, 0.568) url("../assets/images/pexels-sergey-pesterev-8428013.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-blend-mode:darken;
+    background-size: cover;
+    height:100vh;
+  }
+    100% {
+      background:rgba(0, 0, 0, 0.568) url("../assets/images/maldives.jpg");
+      background-repeat: no-repeat;
+      background-position:center;
+      background-blend-mode:darken;
+      background-size: cover;
+      height:100vh;
+}
 }

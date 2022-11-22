@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit  {
   title = 'Onygo';
+  showMe: boolean = false
 
 //Déclaration des variables
 
@@ -35,6 +36,8 @@ public flagdepart :any;
 public flagarrive : any;
 public symboleDevisedepart: any;
 public symboleDevisearrive: any;
+public jour:any;
+public continent : any;
 public photodeProfilKilian ="assets/images/photo-profil-Kilian.jpg"
 public photodeProfilLudo ="assets/images/photo-profil-Ludo.jpg"
 public photodeProfilMika ="assets/images/photo-profil-Michael.jpg"
@@ -59,6 +62,8 @@ ngOnInit():void{
 }
 
 public afficherResultat(){
+  
+  this.showMe=!this.showMe
 
   return this.http.get(`https://restcountries.com/v2/capital/${this.inputDepart.value}`)
   .subscribe((data:any) => {console.log(this.codeDepart= data[0]['currencies'][0]['code']),
@@ -71,7 +76,7 @@ public afficherResultat(){
                                this.symboleDevisearrive=data[0].currencies[0].symbol;
  
    return this.http.get(`https://v6.exchangerate-api.com/v6/${this.cleApi}/pair/${this.codeDepart}/${this.codeDestination}/${this.budget.value}`)
-   .subscribe((data:any) => {this.montant = data.conversion_result.toFixed(0)
+   .subscribe((data:any) => {this.montant = data.conversion_result.toFixed(0);
  
   return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.inputDestination.value}&lang=fr&appid=${this.cleApi2}&units=metric`)
   .subscribe((data:any) => { 
@@ -82,7 +87,31 @@ public afficherResultat(){
   this.feels = `${data.main.feels_like.toFixed(0)}°C`;
   this.humidity = data.main.humidity;
   this.windSpeed = data.wind.speed;
-  this.date =  new Date().toLocaleString('fr-FR', {timeZone: 'Europe/Paris'});
+  this.date =  new Date().toLocaleString('fr-FR', {timeZone: 'Europe/Paris'}); 
+
+  return this.http.get(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${this.inputDestination.value}&cnt=5&lang=fr&appid=${this.cleApi2}&units=metric`)
+  .subscribe((data:any) => { 
+ 
+   const jourSemaine = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi', 'Vendredi', 'Samedi'] 
+ 
+   for (let i = 1, j = 0; i<5; i++, j++){
+     
+     const dt = data.list[i].dt
+     let im = document.createElement('img')
+     im.src =`http://openweathermap.org/img/wn/${data.list[i]['weather'][0]['icon']}.png`
+ 
+     let parJour = document.createElement('p')
+     parJour.innerText = jourSemaine[new Date(dt*1000).getDay()]
+ 
+     let tempPrev = document.createElement('p')
+     tempPrev.innerText = `${data.list[i].temp.day.toFixed(0)}°C`
+ 
+     const datemeteo = document.querySelectorAll('.btn-meteo')
+ 
+     datemeteo[j]?.appendChild(parJour)  
+     datemeteo[j]?.appendChild(tempPrev)
+     datemeteo[j]?.appendChild(im)
+   }
   return this.http.get(`https://api.unsplash.com/search/photos?client_id=${this.cleApi3}&query=${this.inputDestination.value}`)
   .subscribe((data:any) => {
    let section = document.createElement('section')
@@ -103,11 +132,15 @@ public afficherResultat(){
     } 
    
    //this.image=data['results'][this.rand]['urls']['regular']
- 
+  });
   });
   });
   });
   });
  });
+ 
  }
  }
+
+
+//  this.montant = new Intl.NumberFormat(`${this.langage}-${this.alphaCode}`, { style: 'currency', currency: `${this.codeDestination}` }).format(data.conversion_result);
