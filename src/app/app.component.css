@@ -71,8 +71,8 @@ label {
 }
 
 .gallery--img {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: 80%;
   object-fit: contain;
   object-position: center;
 }
@@ -175,13 +175,24 @@ h2,
   width: 70%;
 }
 
-.card-right-meteo-day {
-  background: rgb(43 43 43 / 50%);
+.card-right-meteo-day{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   height: auto;
+  width: 100%;
   border-radius: 20px;
-
-
+}
+.btn-meteo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  margin: 10px 0;
+  border-radius: 10px;
 }
 
 .percepetion,
@@ -194,13 +205,6 @@ h2,
   margin-top: 10px;
 }
 
-.btn-meteo {
-  width: 50px;
-  border: none;
-  background: transparent;
-  color: white;
-  font-size: 18px;
-}
 
 .btn-meteo:hover {
   background-color: white;
