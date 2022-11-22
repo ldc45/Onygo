@@ -25,6 +25,19 @@ public image : any;
 public alphaCode : any;
 public langage :any;
 public nomMonnaie : any;
+public temp : any;
+public humidity : any;
+public windSpeed : any;
+public cityName: any;
+public feels: any;
+public date: any;
+public flagdepart :any;
+public flagarrive : any;
+public symboleDevisedepart: any;
+public symboleDevisearrive: any;
+public photodeProfilKilian ="assets/images/photo-profil-Kilian.jpg"
+public photodeProfilLudo ="assets/images/photo-profil-Ludo.jpg"
+public photodeProfilMika ="assets/images/photo-profil-Michael.jpg"
 
 private cleApi = "a92b35e3151ed3389e3aac02";
 private cleApi2 = "b9df352c5184221ff36bf83de98355c8";
@@ -48,43 +61,53 @@ ngOnInit():void{
 public afficherResultat(){
 
   return this.http.get(`https://restcountries.com/v2/capital/${this.inputDepart.value}`)
- .subscribe((data:any) => {this.codeDepart= data[0]['currencies'][0]['code']
-
-  return this.http.get(`https://restcountries.com/v2/capital/${this.inputDestination.value}`)
+  .subscribe((data:any) => {console.log(this.codeDepart= data[0]['currencies'][0]['code']),
+                             this.flagdepart=data[0].flag;
+                             this.symboleDevisedepart=data[0].currencies[0].symbol;
+ 
+   return this.http.get(`https://restcountries.com/v2/capital/${this.inputDestination.value}`)
+   .subscribe((data:any) => {this.codeDestination=data[0]['currencies'][0]['code'],data[0]['currencies'][0]['name'],
+                               this.flagarrive=data[0].flag;
+                               this.symboleDevisearrive=data[0].currencies[0].symbol;
+ 
+   return this.http.get(`https://v6.exchangerate-api.com/v6/${this.cleApi}/pair/${this.codeDepart}/${this.codeDestination}/${this.budget.value}`)
+   .subscribe((data:any) => {this.montant = data.conversion_result.toFixed(0)
+ 
+  return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.inputDestination.value}&lang=fr&appid=${this.cleApi2}&units=metric`)
+  .subscribe((data:any) => { 
+  this.codeImage = data['weather'][0]['icon'], 
+  this.cityName= data.name;
+  this.temp  = `${data.main.temp.toFixed(0)}°C`;
+  this.description = data.weather[0].description;
+  this.feels = `${data.main.feels_like.toFixed(0)}°C`;
+  this.humidity = data.main.humidity;
+  this.windSpeed = data.wind.speed;
+  this.date =  new Date().toLocaleString('fr-FR', {timeZone: 'Europe/Paris'});
+  return this.http.get(`https://api.unsplash.com/search/photos?client_id=${this.cleApi3}&query=${this.inputDestination.value}`)
   .subscribe((data:any) => {
-    this.codeDestination=data[0]['currencies'][0]['code'],this.nomMonnaie=data[0]['currencies'][0]['name'], this.alphaCode=data[0]['alpha2Code'],this.langage=data[0]['languages'][0]['iso639_1']
-
-  return this.http.get(`https://v6.exchangerate-api.com/v6/${this.cleApi}/pair/${this.codeDepart}/${this.codeDestination}/${this.budget.value}`)
-  .subscribe((data:any) => {this.montant = new Intl.NumberFormat(`${this.langage}-${this.alphaCode}`, { style: 'currency', currency: `${this.codeDestination}` }).format(data.conversion_result);
-
- return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.inputDestination.value}&lang=fr&appid=${this.cleApi2}`)
- .subscribe((data:any) => {this.temperature = (data['main']['temp']-273.15).toFixed(0), this.codeImage = data['weather'][0]['icon'], this.description = data['weather'][0]['description']
-
- return this.http.get(`https://api.unsplash.com/search/photos?client_id=${this.cleApi3}&query=${this.inputDestination.value}`)
- .subscribe((data:any) => {
-  let section = document.createElement('section')
-  section.className = 'gallery'
-  for (let i = 0; i<3; i++){
-    //console.log(data['results'][i]['urls']['regular'])
-    let img = document.createElement('img')
-    //Nous venons de créer un nouvel élément de type  img , mais qui n'est pas encore rattaché au DOM.
-    img.src = data['results'][i]['urls']['regular']
-    //La propriété className de l'interface Element récupère et définit la valeur de l'attribut class de l'élément spécifié.
-    img.className = 'gallery--img'
-    // Nous avons ensuite récupéré l'élément ayant pour class "gallery"
-  
-    const galleryContainers = document.querySelectorAll('.gallery__container');
-   //Nous avons ajouté notre nouvel élément dans les enfants de l'élément 
-    galleryContainers[i]?.appendChild(img) 
-    //La propriété appendChild sur gallery peut être null, ce qui provoque une erreur.Nous pouvons utiliser l'opérateur de chaînage optionnel (?.) pour contourner ce problème.
-   } 
-  
-  //this.image=data['results'][this.rand]['urls']['regular']
-
+   let section = document.createElement('section')
+   section.className = 'gallery'
+   for (let i = 0; i<3; i++){
+     //console.log(data['results'][i]['urls']['regular'])
+     let img = document.createElement('img')
+     //Nous venons de créer un nouvel élément de type  img , mais qui n'est pas encore rattaché au DOM.
+     img.src = data['results'][i]['urls']['regular']
+     //La propriété className de l'interface Element récupère et définit la valeur de l'attribut class de l'élément spécifié.
+     img.className = 'gallery--img'
+     // Nous avons ensuite récupéré l'élément ayant pour class "gallery"
+   
+     const galleryContainers = document.querySelectorAll('.gallery__container');
+    //Nous avons ajouté notre nouvel élément dans les enfants de l'élément 
+     galleryContainers[i]?.appendChild(img) 
+     //La propriété appendChild sur gallery peut être null, ce qui provoque une erreur.Nous pouvons utiliser l'opérateur de chaînage optionnel (?.) pour contourner ce problème.
+    } 
+   
+   //this.image=data['results'][this.rand]['urls']['regular']
+ 
+  });
+  });
+  });
+  });
  });
- });
- });
- });
-});
-}
-}
+ }
+ }

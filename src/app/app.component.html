@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
- 
 <main>
 
   <img id="img1" [src]="logo">
@@ -24,7 +14,7 @@
     </div>
 
 
-  <!-- Inputs de l'utilisateur -->
+    <!-- Inputs de l'utilisateur -->
     <div class="container d-flex justify-content-center">
 
       <div class="row">
@@ -33,8 +23,8 @@
         <div class="col mx-5">
           <select class="form-select" aria-label="Default select example" [formControl]="inputDepart">
 
-            <option selected value>Départ</option>
-            
+            <option selected>Départ</option>
+
             <option value="Abu Dhabi">Abu Dhabi</option>
             <option value="Abuja">Abuja</option>
             <option value="Accra">Accra</option>
@@ -287,9 +277,9 @@
         <!-- Destination -->
         <div class="col mx-2 ">
           <select class="form-select" aria-label="Default select example" [formControl]="inputDestination">
-        
-            <option selected value>Destination</option>
-        
+
+            <option selected>Destination</option>
+
             <option value="Abu Dhabi">Abu Dhabi</option>
             <option value="Abuja">Abuja</option>
             <option value="Accra">Accra</option>
@@ -532,17 +522,19 @@
             <option value="Willemstad">Willemstad</option>
             <option value="Windhoek">Windhoek</option>
             <option value="Yamoussoukro">Yamoussoukro</option>
+
             <option value="Yaoundé">Yaoundé</option>
             <option value="Yaren">Yaren</option>
             <option value="Yerevan">Yerevan</option>
             <option value="Zagreb">Zagreb</option>
           </select>
         </div>
-        
+
         <!-- Budget -->
         <div class="col d-flex justify-content-center">
-         
-          <input placeholder="Budget" class="mx-2 " type="number" id="inputBudget" name="inputBudget" min="0" max="5000" [formControl]="budget">
+
+          <input class="mx-2 " type="number" id="inputBudget" name="inputBudget" min="0" max="5000"
+            [formControl]="budget">
         </div>
 
       </div>
@@ -557,42 +549,209 @@
         </div>
       </div>
     </div>
-<!-- <img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" [alt]="iconMeteo"> -->
+    <!-- <img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" [alt]="iconMeteo"> -->
+
+    <!-- <img [src]="image" alt="imageDestination"> -->
 
   </section>
-  <div id="carouselExampleControls" class="carousel slide w-25" data-bs-ride="false">
-  <div class="carousel-inner">
-    <div class="carousel-item active gallery__container">
-  
-    </div>
-    <div class="carousel-item gallery__container">
-     
-    </div>
-    <div class="carousel-item gallery__container">
-     
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+
 </main>
 
-<!-- {{montant}}
-{{codeDepart }}
-{{codeDestination }}
-{{codeImage }}
-{{temperature }}
-{{description }}
-{{image }}
-{{alphaCode }}
-{{langage }} 
-{{nomMonnaie }} -->
 
-</body>
-</html>
+   
+
+  
+
+<div class="all_cards">
+
+  <div class="card_currency">
+
+    <div class="flag_left">
+        <div class="flag_left_img">
+          <img src="{{flagdepart}}" alt="">
+        </div>
+        <p class="montant">{{budget.value}} {{symboleDevisedepart}}</p>
+    </div>
+  
+
+  <div class="card_currency_mid">
+    <div class="icons_top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="m12 16l4-4l-4-4l-1.4 1.4l1.6 1.6H8v2h4.2l-1.6 1.6Zm0 6q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"/></svg>
+              
+    </div>
+    <div class="icons_bot">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g transform="rotate(180 12 12)"><path fill="currentColor" d="m12 16l4-4l-4-4l-1.4 1.4l1.6 1.6H8v2h4.2l-1.6 1.6Zm0 6q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"/></g></svg>
+    </div>
+  </div>
+
+  <div class="currency_right">
+    <div class="flag_right">
+      <div class="flag_left_img">
+        <img src="{{flagarrive}}" alt="">
+      </div>
+      <p class="montant">{{montant}} {{symboleDevisearrive}}</p>
+  </div>
+  </div>
+</div>
+
+
+
+
+    <div class="card">
+
+      <div class="card-left">
+
+        <div class="card-left-details text-white">
+          <h1 id=></h1>
+          <h2 id="ID_dateDuJour">{{date}}</h2>
+          <h3>{{cityName}}</h3>
+
+        </div>
+
+        <div class="card-left-temp">
+
+          <div class="card-left-deg text-white">
+            <p id="ID_temp">{{temp}}</p>
+            <div id="codeImage"><img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" alt="iconMeteo"></div>
+            <p id="ID_tempDescription">{{description}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-right">
+        <div class="card-right-detail">
+          <div class="percepetion text-white">
+            <p>Ressenti</p>
+            <p id="ID_perception">{{feels}}</p>
+          </div>
+          <div class="Humidity text-white">
+            <p>Humidité</p>
+            <p id="ID_humidity">{{humidity}}%</p>
+          </div>
+          <div class="Wind text-white">
+            <p>Vitesse du vent</p>
+            <p id="ID_wind">{{windSpeed}} m/sec</p>
+          </div>
+        </div>
+
+
+        <div class="card-right-meteo-day">
+          <button class="btn-meteo">
+
+            <p>Tue</p>
+            <p>29&deg</p>
+          </button>
+          <button class="btn-meteo">
+
+            <p>Tue</p>
+            <p>29&deg</p>
+          </button>
+          <button class="btn-meteo">
+
+            <p>Tue</p>
+            <p>29&deg</p>
+          </button>
+          <button class="btn-meteo">
+
+            <p>Tue</p>
+            <p>29&deg</p>
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+    <div id="carouselExampleControls" class="carousel slide w-50" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active gallery__container">
+
+        </div>
+        <div class="carousel-item gallery__container">
+
+        </div>
+        <div class="carousel-item gallery__container">
+
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+<!-- Mise en place du footer -->
+
+
+    <section class="page-section bg-light" id="team">
+      <div class="container">
+          <div class="text-center">
+              <h2 class="section-heading text-uppercase">Voici les acteurs qui agissent dans l'ombre</h2>
+              <h3 class="section-subheading text-muted">Sans qui rien n'aurait pu être possible</h3>
+          </div>
+
+
+          <div class="row">
+
+                      <!-- Mise en place de la card Kilian -->
+
+
+              <div class="col-lg-4">
+                  <div class="team-member">
+                      <img class="mx-auto rounded-circle" [src]="photodeProfilKilian" alt="..." />
+                      <h4>Kilian Olry</h4>
+                      <p class="text-muted">Développeur web</p>
+                      <a class="btn btn-dark btn-social mx-2" href="https://github.com/KilianOlry"><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="currentColor" fill-rule="evenodd" d="M16 2a14 14 0 0 0-4.43 27.28c.7.13 1-.3 1-.67v-2.38c-3.89.84-4.71-1.88-4.71-1.88a3.71 3.71 0 0 0-1.62-2.05c-1.27-.86.1-.85.1-.85a2.94 2.94 0 0 1 2.14 1.45a3 3 0 0 0 4.08 1.16a2.93 2.93 0 0 1 .88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4 5.4 0 0 1 1.44-3.76a5 5 0 0 1 .14-3.7s1.17-.38 3.85 1.43a13.3 13.3 0 0 1 7 0c2.67-1.81 3.84-1.43 3.84-1.43a5 5 0 0 1 .14 3.7a5.4 5.4 0 0 1 1.44 3.76c0 5.38-3.27 6.56-6.39 6.91a3.33 3.33 0 0 1 .95 2.59v3.84c0 .46.25.81 1 .67A14 14 0 0 0 16 2Z"/></svg>
+                      </a>
+                      <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/kilian-olry-58038b1a6/"><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg></a>
+                      <a class="btn btn-dark btn-social mx-2" href="mailto:kilian.olry@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.412-.587Q2 18.825 2 18V6q0-.825.588-1.412Q3.175 4 4 4h16q.825 0 1.413.588Q22 5.175 22 6v12q0 .825-.587 1.413Q20.825 20 20 20Zm8-7l8-5V6l-8 5l-8-5v2Z"/></svg></a>
+                  </div>
+              </div>
+
+                        <!-- Mise en place de la card Ludovic -->
+
+
+              <div class="col-lg-4">
+                  <div class="team-member">
+                      <img class="mx-auto rounded-circle" [src]="photodeProfilLudo" alt="..." />
+                      <h4>Ludovic Agesilas</h4>
+                      <p class="text-muted">Développeur web</p>
+                      <a class="btn btn-dark btn-social mx-2" href="https://github.com/ldc45"><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="currentColor" fill-rule="evenodd" d="M16 2a14 14 0 0 0-4.43 27.28c.7.13 1-.3 1-.67v-2.38c-3.89.84-4.71-1.88-4.71-1.88a3.71 3.71 0 0 0-1.62-2.05c-1.27-.86.1-.85.1-.85a2.94 2.94 0 0 1 2.14 1.45a3 3 0 0 0 4.08 1.16a2.93 2.93 0 0 1 .88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4 5.4 0 0 1 1.44-3.76a5 5 0 0 1 .14-3.7s1.17-.38 3.85 1.43a13.3 13.3 0 0 1 7 0c2.67-1.81 3.84-1.43 3.84-1.43a5 5 0 0 1 .14 3.7a5.4 5.4 0 0 1 1.44 3.76c0 5.38-3.27 6.56-6.39 6.91a3.33 3.33 0 0 1 .95 2.59v3.84c0 .46.25.81 1 .67A14 14 0 0 0 16 2Z"/></svg>
+                      </a>
+                      <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/ludovic-a-b5896b230/"><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg></a>
+                      <a class="btn btn-dark btn-social mx-2" href="mailto:Ldc45@outlook.fr"><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.412-.587Q2 18.825 2 18V6q0-.825.588-1.412Q3.175 4 4 4h16q.825 0 1.413.588Q22 5.175 22 6v12q0 .825-.587 1.413Q20.825 20 20 20Zm8-7l8-5V6l-8 5l-8-5v2Z"/></svg></a>
+                  </div>
+              </div>
+
+                        <!-- Mise en place de la card Michael -->
+
+
+              <div class="col-lg-4">
+                  <div class="team-member">
+                      <img class="mx-auto rounded-circle" [src]="photodeProfilMika" alt="..." />
+                      <h4>Michael Dijoux</h4>
+                      <p class="text-muted">Développeur web</p>
+                      <a class="btn btn-dark btn-social mx-2" href="https://github.com/Mikadjx"><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="currentColor" fill-rule="evenodd" d="M16 2a14 14 0 0 0-4.43 27.28c.7.13 1-.3 1-.67v-2.38c-3.89.84-4.71-1.88-4.71-1.88a3.71 3.71 0 0 0-1.62-2.05c-1.27-.86.1-.85.1-.85a2.94 2.94 0 0 1 2.14 1.45a3 3 0 0 0 4.08 1.16a2.93 2.93 0 0 1 .88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4 5.4 0 0 1 1.44-3.76a5 5 0 0 1 .14-3.7s1.17-.38 3.85 1.43a13.3 13.3 0 0 1 7 0c2.67-1.81 3.84-1.43 3.84-1.43a5 5 0 0 1 .14 3.7a5.4 5.4 0 0 1 1.44 3.76c0 5.38-3.27 6.56-6.39 6.91a3.33 3.33 0 0 1 .95 2.59v3.84c0 .46.25.81 1 .67A14 14 0 0 0 16 2Z"/></svg></a>
+                      <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/mickael-dijoux-a58797252/"><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg></a>
+                      <a class="btn btn-dark btn-social mx-2" href="mailto:dijoux_mickael@outlook.fr"><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.412-.587Q2 18.825 2 18V6q0-.825.588-1.412Q3.175 4 4 4h16q.825 0 1.413.588Q22 5.175 22 6v12q0 .825-.587 1.413Q20.825 20 20 20Zm8-7l8-5V6l-8 5l-8-5v2Z"/></svg></a>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+          </div>
+      </div>
+  </section>
+
+<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
