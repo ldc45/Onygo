@@ -7,17 +7,17 @@
   <title>Document</title>
 </head>
 <body>
- 
+
 <main>
 
   <img id="img1" [src]="logo">
   <!-- Section 1 -->
   <section class="proj-grid">
-    <div class="container d-flex justify-content-center align-items-center">
+    <div class="container">
       <div class="row gy-4 gy-md-0 text-center">
         <div class="col-12 ">
           <hr id="line1" class="bg-danger border-1.1 border-top border-white">
-          <h1 id="titre" class=" py-5 text-white my-5"> Avec Onygo voyage à travers le monde !</h1>
+          <h1 id="titre" class=" py-5 text-white"> Avec Onygo voyage à travers le monde !</h1>
           <h3 class="fw-light py-5 my-5 text-white ">Indique ta destination et ton budget </h3>
         </div>
       </div>
@@ -34,7 +34,7 @@
           <select class="form-select" aria-label="Default select example" [formControl]="inputDepart">
 
             <option selected value>Départ</option>
-            
+
             <option value="Abu Dhabi">Abu Dhabi</option>
             <option value="Abuja">Abuja</option>
             <option value="Accra">Accra</option>
@@ -287,9 +287,9 @@
         <!-- Destination -->
         <div class="col mx-2 ">
           <select class="form-select" aria-label="Default select example" [formControl]="inputDestination">
-        
+
             <option selected value>Destination</option>
-        
+
             <option value="Abu Dhabi">Abu Dhabi</option>
             <option value="Abuja">Abuja</option>
             <option value="Accra">Accra</option>
@@ -538,10 +538,10 @@
             <option value="Zagreb">Zagreb</option>
           </select>
         </div>
-        
+
         <!-- Budget -->
         <div class="col d-flex justify-content-center">
-         
+
           <input placeholder="Budget" class="mx-2 " type="number" id="inputBudget" name="inputBudget" min="0" max="5000" [formControl]="budget">
         </div>
 
@@ -553,23 +553,28 @@
     <div class="container d-flex justify-content-center my-5">
       <div class="row">
         <div class="col my-5">
-          <a (click)="afficherResultat()" class="btn btn-primary">Rechercher</a>
+          <a (click)="afficherResultat()" class="btn btn-primary" id="btnValidate">Rechercher</a>
         </div>
       </div>
     </div>
 <!-- <img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" [alt]="iconMeteo"> -->
 
   </section>
-  <div id="carouselExampleControls" class="carousel slide w-25" data-bs-ride="false">
+  </main>
+
+<div id="Part2" class="container my-5">
+<div class="row">
+<div class="col">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
   <div class="carousel-inner">
     <div class="carousel-item active gallery__container">
-  
+
     </div>
     <div class="carousel-item gallery__container">
-     
+
     </div>
     <div class="carousel-item gallery__container">
-     
+
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -581,7 +586,31 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-</main>
+</div>
+<div class="col">
+  <div *ngIf="showMe">
+  <div class="card mb-3" style="max-width: 540px;">
+        <img class="w-25 h-25" src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png">Quelle temps fait-il aujourd'hui à {{inputDestination.value}}?<br>{{temperature}}°C et {{description}}
+      </div>
+      <div  class="col">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted"></small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
 
 <!-- {{montant}}
 {{codeDepart }}
@@ -591,7 +620,7 @@
 {{description }}
 {{image }}
 {{alphaCode }}
-{{langage }} 
+{{langage }}
 {{nomMonnaie }} -->
 
 </body>

@@ -2,22 +2,98 @@
 
 /* CSS à re-factoriser car certains sélecteurs sont inutilisés */
 
+.carousel-inner {
+max-width: 40vw;
+max-height: 40vh;
+
+}
+
+
+.proj-grid {
+  margin-top:-100px;
+}
 main {
-  background:rgba(0, 0, 0, 0.619) url("../assets/images/maldives.jpg");
-  background-repeat: no-repeat;
-  background-position:bottom;
-  background-blend-mode:darken;
-  background-size: cover;
-  height:100vh;
+  animation: change-background linear infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards ;
+  animation-timing-function:ease-in-out;
+  animation-play-state: running;
+  animation-duration: 30s;
+
+
+}
+
+
+@keyframes change-background {
+
+  0% {
+    background:rgba(0, 0, 0, 0.619) url("../assets/images/maldives.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-blend-mode:darken;
+    background-size: cover;
+    height:100vh;
+
+
+
+
+  }
+  20% {
+    background:rgba(0, 0, 0, 0.739) url("../assets/images/road-gd66647307_1920.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-blend-mode:darken;
+    background-size: cover;
+    height:100vh;
+
+
+  }
+  40% {
+      background:rgba(0, 0, 0, 0.619) url("../assets/images/mountains-g3de4b6be3_1920.jpg");
+      background-repeat: no-repeat;
+      background-position:center;
+      background-blend-mode:darken;
+      background-size: cover;
+      height:100vh;
+
+
+    }
+    60% {
+        background:rgba(0, 0, 0, 0.568) url("../assets/images/buildings-g02c50bf44_1920.jpg");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-blend-mode:darken;
+        background-size: cover;
+        height:100vh;
+
+
+  }
+  80% {
+    background:rgba(0, 0, 0, 0.568) url("../assets/images/pexels-sergey-pesterev-8428013.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-blend-mode:darken;
+    background-size: cover;
+    height:100vh;
+  }
+    100% {
+      background:rgba(0, 0, 0, 0.568) url("../assets/images/maldives.jpg");
+      background-repeat: no-repeat;
+      background-position:center;
+      background-blend-mode:darken;
+      background-size: cover;
+      height:100vh;
+
+}
 }
 
 #titre {
 font-family:'Times New Roman', Times, serif;
 }
 
-#line2 {
+#line1 {
 
-  margin-top:20px;
+  margin-top:30px;
   color: inherit;
   background-color: currentColor;
   border: 0;
@@ -31,19 +107,13 @@ font-family:'Times New Roman', Times, serif;
     height: 300px;
     width: 300px;
     margin-left: -45px;
-    margin-top: 10px;
-    
+    margin-top: -65px;
+
   }
-  
+
   .form-control {
 height: 25px;
 
-  }
-
-
-  label {
-
-    color: aliceblue;
   }
 
   .hr {
@@ -53,58 +123,55 @@ height: 25px;
     border: 0;
     opacity: 0.2;
   }
-  
-  #line2 {
-  
-    margin-top:20px;
-    color: inherit;
-    background-color: currentColor;
-    border: 0;
-    opacity: 0.2;
-  
-  }
 
 
-.gallery--img{
-display: block;
-  width: 25%;
- 
-}
-  
+
+
+
 
 /* Ecran < 599px */
 
 @media (max-width: 768px) {
   .proj-grid {
-
+margin-top: -50%;
  height: 100vh;
 
-  
   }
-  main {
-    background-size:contain;
-    background-position:center;
-   background: local;
-   
-    background:rgba(0, 0, 0, 0.372) url(../assets/images/maldives.jpg);
-    height: 100%;
-    background-repeat: no-repeat;
-    
-  }
+
   h1 {
     font-size:large;
-   
+
   }
   #img1 {
 
     height: 300px;
     width: 300px;
     margin-left: 5px;
+    margin-top:   -10px;
   }
   #line1 {
    margin: 20%;
   }
+  #inputBudget {
+    margin-top: 5%;
+
+    }
+    #btnValidate {
+
+      margin-top: -20%;
+
+    }
+    .carousel-inner {
+      max-width: 100vw;
+      max-height: 100vh;
+
+      }
+#Part2 {
+height: 100vh;
+width:100vw;
 }
+}
+
 
 
 
