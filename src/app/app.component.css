@@ -73,7 +73,8 @@ label {
 .gallery--img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
 
@@ -87,16 +88,7 @@ label {
 
   }
 
-  main {
-    background-size: contain;
-    background-position: center;
-    background: local;
-
-    background: rgba(0, 0, 0, 0.372) url(../assets/images/maldives.jpg);
-    height: 100%;
-    background-repeat: no-repeat;
-
-  }
+ 
 
   h1 {
     font-size: large;
@@ -146,9 +138,7 @@ label {
   padding: 10px;
 }
 
-h1 {
-  font-size: 20px;
-}
+
 
 h2,
 .location {
@@ -247,7 +237,7 @@ h2,
 
 
 .all_cards {
-  margin-top: 150px;
+  margin: 50px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -391,4 +381,10 @@ main {
       background-size: cover;
       height:100vh;
 }
+}
+
+.carousel-inner{
+  max-width: 50vw;
+  max-height: 50vh;
+  margin: auto;
 }
