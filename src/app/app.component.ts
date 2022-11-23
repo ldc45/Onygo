@@ -38,11 +38,13 @@ public symboleDevisedepart: any;
 public symboleDevisearrive: any;
 public jour:any;
 public continent : any;
+public capitals: string[] = []; //public capitals: string[]; puis initialisation
+
 public photodeProfilKilian ="assets/images/photo-profil-Kilian.jpg"
 public photodeProfilLudo ="assets/images/photo-profil-Ludo.jpg"
 public photodeProfilMika ="assets/images/photo-profil-Michael.jpg"
 
-private cleApi = "a92b35e3151ed3389e3aac02";
+private cleApi = "313b518f76372b10bb570988";
 private cleApi2 = "b9df352c5184221ff36bf83de98355c8";
 private cleApi3 = "goLxS35I_CQHM3MjK7FPnznmQrKYGksKqEjSsu5UfrE";
 
@@ -139,9 +141,23 @@ public afficherResultat(){
   });
   });
  });
- 
  }
  }
 
 
 //  this.montant = new Intl.NumberFormat(`${this.langage}-${this.alphaCode}`, { style: 'currency', currency: `${this.codeDestination}` }).format(data.conversion_result);
+
+//!ATTENTION NE PAS SUPPRIMER BOUCLE CAPITALS
+//   return this.http.get(`https://restcountries.com/v2/all`)
+//   .subscribe((data:any) => {
+//     data.forEach((element: { capital: any; })  => { 
+//       if(element.capital != undefined){
+//     this.capitals.push(element.capital);
+//       }
+//     });  
+// console.log(this.capitals.sort());
+ 
+
+
+
+//<option *ngFor="let capital of capitals" value="'{{capital}}">{{ capital }}</option>

@@ -19,9 +19,10 @@
 
         <!-- Départ -->
         <div class="col mx-5">
+        
           <select class="form-select" aria-label="Default select example" [formControl]="inputDepart">
 
-            <option selected>Départ</option>
+            <option *ngFor="let capital of capitals" value="'{{capital}}">{{ capital }}</option>
 
             <option value="Abu Dhabi">Abu Dhabi</option>
             <option value="Abuja">Abuja</option>
@@ -656,7 +657,7 @@
 </div>
 
 <!-- Caroussel -->
-<div id="carouselExampleControls" class="carousel slide m-auto w-50 mb-5" data-bs-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide m-auto  mb-5" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active gallery__container">
 
