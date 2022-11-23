@@ -8,17 +8,5 @@ if (environment.production) {
   enableProdMode();
 }
 
-function bootloader(main: any) {
-  if (document.readyState === 'complete') {
-    main()
-  } else {
-    document.addEventListener('DOMContentLoaded', main);
-  }
-}
-
-function main (){
-  return platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
-};
-
-bootloader(main);
