@@ -109,6 +109,7 @@ public afficherResultat(){
      const datemeteo = document.querySelectorAll('.btn-meteo')
  
      datemeteo[j]?.appendChild(parJour)  
+     
      datemeteo[j]?.appendChild(tempPrev)
      datemeteo[j]?.appendChild(im)
    }
