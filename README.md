@@ -14,6 +14,8 @@
 
 ###
 
+<br clear="both">
+
 <h2 align="center">Langage utilisée</h2>
 
 ###
