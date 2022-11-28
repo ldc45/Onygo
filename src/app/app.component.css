@@ -23,9 +23,6 @@ main {
 
 }
 
-#part2{
-  background-color: #E2D686;
-}
 #img1 {
 
   height: 300px;
@@ -387,4 +384,6 @@ main {
   max-width: 50vw;
   max-height: 50vh;
   margin: auto;
+  border-radius: 2em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
