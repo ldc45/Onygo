@@ -2,8 +2,13 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// IMPORTANT : Ne jamais committer vos clés API réelles ici.
+// Créez un fichier environment.local.ts (ignoré par git) avec vos vraies clés.
 export const environment = {
-  production: false
+  production: false,
+  exchangeRateApiKey: 'VOTRE_CLE_EXCHANGERATE_API',
+  openWeatherApiKey: 'VOTRE_CLE_OPENWEATHER_API',
+  unsplashApiKey: 'VOTRE_CLE_UNSPLASH_API'
 };
 
 /*

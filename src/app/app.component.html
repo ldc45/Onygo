@@ -548,9 +548,17 @@
         </div>
       </div>
     </div>
-    <!-- <img src="http://openweathermap.org/img/wn/{{codeImage}}@2x.png" [alt]="iconMeteo"> -->
 
-    <!-- <img [src]="image" alt="imageDestination"> -->
+    <!-- Indicateur de chargement -->
+    <div *ngIf="loading" class="container d-flex justify-content-center align-items-center my-3">
+      <div class="spinner-border text-white" role="status"></div>
+      <span class="text-white ms-3">Chargement des données...</span>
+    </div>
+
+    <!-- Message d'erreur -->
+    <div *ngIf="errorMessage" class="container d-flex justify-content-center my-3">
+      <div class="alert alert-danger" role="alert">{{ errorMessage }}</div>
+    </div>
 
   </section>
 
@@ -640,13 +648,10 @@
 
 
       <div class="card-right-meteo-day">
-        <button class="btn-meteo">
-        </button>
-        <button class="btn-meteo">
-        </button>
-        <button class="btn-meteo">
-        </button>
-        <button class="btn-meteo">
+        <button class="btn-meteo" *ngFor="let day of forecastDays">
+          <p>{{ day.day }}</p>
+          <p>{{ day.temp }}</p>
+          <img [src]="'http://openweathermap.org/img/wn/' + day.icon + '.png'" alt="">
         </button>
       </div>
 
@@ -659,14 +664,10 @@
 <!-- Caroussel -->
 <div id="carouselExampleControls" class="carousel carousel-dark slide m-auto  mb-5" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active gallery__container">
-
-    </div>
-    <div class="carousel-item gallery__container">
-
-    </div>
-    <div class="carousel-item gallery__container">
-
+    <div *ngFor="let photo of photos; let i = index"
+         class="carousel-item gallery__container"
+         [class.active]="i === 0">
+      <img [src]="photo" class="gallery--img" alt="Photo de destination">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
